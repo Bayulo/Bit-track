@@ -1,3 +1,6 @@
+body{
+    background-color: rgb(215, 242, 215);
+}
 #profile_salutation{
     border: solid;
     margin-top: 2%;
@@ -16,13 +19,27 @@
 }
 main{
     border: solid;
+    margin-top: 2%;
 }
 ul{
     list-style-type: none;
+    display: inline;
 }
 #side_nav_bar{
     border: solid;
     display: inline-block;
+    width: 15%;
+    height: 100vh;
+}
+#side_nav_bar a{
+    text-decoration: none;
+}
+#side_nav_bar li:hover{
+    background-color: green;
+}
+#side_nav_bar li{
+    margin: 10px 10px;
+    width: 90%;
 }
 #info_per_nav_item{
     display: inline-block;
