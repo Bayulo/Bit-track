@@ -12,6 +12,7 @@ body{
     background-color: rgb(0, 95, 0);
     padding-top: 5vh;
     padding-bottom: 2vh;
+     box-shadow: 5px 6px 10px rgb(109, 108, 108);
 }
 #profile_button{
     border: solid;
@@ -61,15 +62,48 @@ footer{
 }
 #responsive_nav{
     border-color:rgb(0, 95, 0);
-    display: inline-block;
-    width: 5vw;
+    display: none;
+    width: 7vw;
     height: 100vh;
     box-shadow: 5px 6px 10px rgb(109, 108, 108);
     z-index: 999;
     background-color: rgb(0, 95, 0);
 }
+#responsive_nav img{
+    padding: 2vw;
+    width: 5vw;
+}
+#responsive_nav li:hover{
+    background-color: rgb(0, 142, 0);
+}
 @media screen and (max-width: 900px) {
     #side_nav_bar{
         display: none;
+    }
+    #responsive_nav{
+        display: inline-block;
+    }
+    #responsive_nav img{
+    padding: 1vw;
+    width: 5vw;
+    }
+}
+@media screen and (max-width: 800px) {
+    #responsive_nav{
+        width: 8vw;
+    }
+}
+@media screen and (max-width: 700px) {
+    #responsive_nav{
+        width: 9vw;
+    }
+    #responsive_nav img{
+    padding: 2vw;
+    width: 5vw;
+    }
+}
+@media screen and (max-width: 550px) {
+    #responsive_nav{
+        width: 10vw;
     }
 }
