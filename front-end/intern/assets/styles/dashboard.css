@@ -1,0 +1,34 @@
+#profile_salutation{
+    border: solid;
+    margin-top: 2%;
+    border-radius: 0px 0px 20px 0px;
+}
+#profile_button{
+    border: solid;
+    display: inline-block;
+    height: 40px;
+    border-radius: 60px;
+    margin-left: 2%;
+}
+#salutation{
+    display: inline-block;
+    margin-left: 45%;
+}
+main{
+    border: solid;
+}
+ul{
+    list-style-type: none;
+}
+#side_nav_bar{
+    border: solid;
+    display: inline-block;
+}
+#info_per_nav_item{
+    display: inline-block;
+    border: solid;
+}
+footer{
+    text-align: center;
+    font-size: small;
+}

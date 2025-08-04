@@ -1,0 +1,56 @@
+#dets{
+    width: 20%;
+    padding-left: 8%;
+    margin: 8% 35%;
+    border-radius: 10px;
+}
+#full_name, #password, #name{
+    margin: 2% 0%;
+}
+body{
+    background-color: rgb(215, 242, 215);
+}
+#portal{
+    font-style: italic;
+    font-size: small;
+}
+header{
+    text-align: center;
+    margin-top: 10%;
+    font-size: 190%;
+    color: green;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+}
+footer{
+    text-align: center;
+    font-size:small;
+    margin-top: 15%;
+}
+button{
+    margin: 5% 15%;
+    text-align: center;
+    align-self: center;
+    width: 30%;
+    height: 35px;
+    border: 2px solid green;
+    border-radius: 8px;
+    background-color: green;
+    transition-duration: 0.5s;
+}
+button:hover{
+    background-color: rgb(0, 186, 0);
+    cursor: pointer;
+    width: 32%;
+}
+@media screen and (max-width: 980px) {
+    #dets{
+        width: 25%;
+        margin: 8% 30%;
+    }
+}
+@media screen and (max-width: 730px) {
+    #dets{
+        width: 38%;
+    }
+}
