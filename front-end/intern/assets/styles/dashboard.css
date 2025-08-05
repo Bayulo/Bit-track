@@ -30,8 +30,6 @@ ul{
     display: inline;
 }
 main{
-    display: block;
-    border: solid;
 }
 #side_nav_bar{
     border-color:rgb(0, 95, 0);
@@ -56,6 +54,32 @@ main{
     height: 5vh;
     padding-left: 1vw;
 }
+#responsive_nav{
+    border-color:rgb(0, 95, 0);
+    display: none;
+    width: 7vw;
+    height: 100vh;
+    box-shadow: 5px 6px 10px rgb(109, 108, 108);
+    z-index: 999;
+    background-color: rgb(0, 95, 0);
+}
+#responsive_nav li:hover{
+    background-color: rgb(0, 142, 0);
+}
+#responsive_nav a{
+    text-decoration: none;
+    display: block;
+    color: rgb(255, 255, 255);
+}
+#responsive_nav li{
+    margin: 10px 0px;
+    width: auto;
+    height: auto;
+    padding-left: 1vw;
+}
+.view_on_mobile{
+    display: none;
+}
 #info_per_nav_item{
     display: inline-block;
     border: solid;
@@ -65,42 +89,36 @@ footer{
     text-align: center;
     font-size: small;
 }
-.hide_on_pc{
-    display: none;
-}
 @media screen and (max-width: 900px) {
-    .hide_on_mobile{
+    #side_nav_bar{
         display: none;
     }
-    .hide_on_pc{
+    #responsive_nav{
         display: inline-block;
     }
-    #side_nav_bar li{
-        width: ;
-    }
-    #side_nav_bar{
-        width: 8vw;
+    #responsive_nav img{
+        padding: 1vw;
+        width: 4vw;
     }
 }
 @media screen and (max-width: 800px) {
-    #side_nav_bar{
+    #responsive_nav{
         width: 8vw;
+    }
+    #responsive_nav img{
+        width: 5vw;
     }
 }
 @media screen and (max-width: 700px) {
-    #side_nav_bar{
-        width: 9vw;
-    }
     #responsive_nav img{
-    padding: 2vw;
-    width: 5vw;
+        width: 5vw;
     }
 }
 @media screen and (max-width: 550px) {
-    #side_nav_bar{
+    #responsive_nav{
         width: 10vw;
     }
-    #side_nav_bar li{
-        width: 10vw;
+     #responsive_nav img{
+        width: 6vw;
     }
 }
