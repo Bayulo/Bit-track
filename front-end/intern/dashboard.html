@@ -24,17 +24,13 @@
         <nav>
             <div id="side_nav_bar">
                 <ul>
-                    <a href=""><li>Dashboard</li></a>
-                    <a href=""><li>Fellow interns</li></a>
-                    <a href=""><li>Supervisor</li></a>
-                    <a href=""><li>Settings</li></a>
-                    <a href=""><li>Logout</li></a>
-                    <a href=""><li>Help</li></a>
-                </ul>
-            </div>
-            <div id="responsive_nav">
-                <ul>
-                    <a href=""><li><img src="/front-end/intern/assets/images/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"></li></a>
+                    <li class="hide_on_mobile"><a href="">Dashboard</a></li>
+                    <li class="hide_on_mobile"><a href="">Fellow interns</a></li>
+                    <li class="hide_on_mobile"><a href="">Supervisor</a></li>
+                    <li class="hide_on_mobile"><a href="">Settings</a></li>
+                    <li class="hide_on_mobile"><a href="">Logout</a></li>
+                    <li class="hide_on_mobile"><a href="">Help</a></li>
+                    <li onclick=showNavbar() class="hide_on_pc"><a href=""><img src="/front-end/intern/assets/images/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"></a></li>
                 </ul>
             </div>
         </nav>
@@ -47,5 +43,6 @@
     <footer>
         &copy; Bits Valley 2025
     </footer>
+    <script src="assets/script.js"></script>
 </body>
 </html>

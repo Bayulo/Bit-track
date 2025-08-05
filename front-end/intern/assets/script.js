@@ -1,12 +1,8 @@
-loginValidation(){
-    username = document.getElementById("name");
-    password = document.getElementById("password");
-
-    errors = [];
-    if(password.length() < 7){
-    errors.push("Password must be minimum 7 characters");
-    }
-
-    dispError = document.getElementById("dispError");
-    dispError.textContent = errors;
+function showNavbar(){
+    const navBar = document.querySelector("#side_nav_bar");
+    navBar.style.display = "inline-block";
+    navBar.style.width = "29vw";
+    document.querySelector("#side_nav_bar li").style.width = "28vw";
+    const responsive_nav = document.querySelector("#responsive_nav");
+    responsive_nav.style.display = "none";
 }
