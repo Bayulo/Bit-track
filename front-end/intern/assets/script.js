@@ -15,6 +15,7 @@ function showNavbar() {
         // Hide menu
         icon.setAttribute("src", "/front-end/intern/assets/images/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png");
         items.forEach(item => item.style.display = "none");
+        responsive_nav.style.width = "10vw";
     }
 
     isOpen = !isOpen; // Flip the toggle
