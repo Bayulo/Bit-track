@@ -4,42 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="/front-end/Supervisor/assets/styles/dashboard.css" rel="stylesheet">
+    <link href="assets/styles/dashboard.css" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div>
+        <div id="logo">
             Bit Track
         </div>
-        <div>
+        <div id="profile_salutation">
             <div id="profile_button">
                 Profile
             </div>
-            <div>
-                Hi Sir/Madam <span>....</span>.
+            <div id="salutation">
+                Hi <span>....</span>.
             </div>
         </div>
     </header>
     <main>
-        <div id="side_nav_bar">
-            <ul>
-                <li>Dashboard</li>
-                <li>Interns</li>
-                <li>Fellow Supervisors</li>
-                <li>Settings</li>
-                <li>Logout</li>
-                <li>Report</li>
-            </ul>
-        </div>
+        <nav>
+            <div id="side_nav_bar">
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Fellow interns</a></li>
+                    <li><a href="#">Supervisor</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Logout</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </div>
+            <div id="responsive_nav">
+                <ul>
+                    <li onclick=showNavbar()><a href="#"><img id="open_close_nav" src="/front-end/Supervisor/assets/images/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"></a></li>
+                    <li class="view_on_mobile"><a href="#">Dashboard</a></li>
+                    <li class="view_on_mobile"><a href="#">Fellow interns</a></li>
+                    <li class="view_on_mobile"><a href="#">Supervisor</a></li>
+                    <li class="view_on_mobile"><a href="#">Settings</a></li>
+                    <li class="view_on_mobile"><a href="#">Logout</a></li>
+                    <li class="view_on_mobile"><a href="#">Help</a></li>
+                </ul>
+            </div>
+        </nav>
         <div id="info_per_nav_item">
-            <div>Submitted Tasks</div>
-            <div>Assign Tasks</div>
-            <div>Interns</div>
+            <div id="top_tasks">
+                <div id="log_book">Daily Logbook</div>
+                <div id="tasks">Tasks</div>
+            </div>
+            <div id="deadline">Your internship ends in <span>.....</span></div>
         </div>
     </main>
-    <script src="/front-end/Supervisor/assets/script.js"></script>
     <footer>
         &copy; Bits Valley 2025
     </footer>
+    <script src="assets/script.js"></script>
 </body>
 </html>

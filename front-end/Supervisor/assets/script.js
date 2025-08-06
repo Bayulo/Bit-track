@@ -1,12 +1,35 @@
-loginValidation(){
-    username = document.getElementById("name");
-    password = document.getElementById("password");
+// Global toggle variable
+let isOpen = false;
 
-    errors = [];
-    if(password.length() < 7){
-    errors.push("Password must be minimum 7 characters");
+function showNavbar() {
+    const icon = document.getElementById("open_close_nav");
+    const items = document.querySelectorAll(".view_on_mobile");
+    const responsive_nav = document.getElementById("responsive_nav");
+
+    if (!isOpen) {
+        // Show menu
+        icon.setAttribute("src", "/front-end/intern/assets/images/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png");
+        items.forEach(item => item.style.display = "block");
+        responsive_nav.style.width = "35vw";
+    } else {
+        // Hide menu
+        icon.setAttribute("src", "/front-end/intern/assets/images/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png");
+        items.forEach(item => item.style.display = "none");
+        responsive_nav.style.width = "9vw";
     }
 
-    dispError = document.getElementById("dispError");
-    dispError.textContent = errors;
+    isOpen = !isOpen; // Flip the toggle
 }
+
+// loginValidation(){
+//     username = document.getElementById("name");
+//     password = document.getElementById("password");
+
+//     errors = [];
+//     if(password.length() < 7){
+//     errors.push("Password must be minimum 7 characters");
+//     }
+
+//     dispError = document.getElementById("dispError");
+//     dispError.textContent = errors;
+// }

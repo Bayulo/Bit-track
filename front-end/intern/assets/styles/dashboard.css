@@ -1,30 +1,34 @@
 body{
-    background-color: rgb(215, 242, 215);
+    background-color: #ffccc8;
     font-size: 3vh;
     margin: 0 0;
 }
 #logo{
-    background-color: rgb(0, 95, 0);
+    background-color: #721A14;
     padding-top: 2%;
+    color: white;
+    padding-left: 45%;
+
 }
 #profile_salutation{
-    border-color:rgb(0, 95, 0);
+    border-color:#721A14;
     border-radius: 0px 0px 5vh 0px;
-    background-color: rgb(0, 95, 0);
+    background-color: #721A14;
     padding-top: 5vh;
     padding-bottom: 2vh;
-     box-shadow: 5px 6px 10px rgb(109, 108, 108);
+    box-shadow: 5px 6px 10px rgb(109, 108, 108);
 }
 #profile_button{
     border: solid;
     display: inline-block;
-    height: 40px;
+    height: 8vh;
     border-radius: 50%;
     margin-left: 2%;
 }
 #salutation{
     display: inline-block;
     margin-left: 35%;
+    color: white;
 }
 ul{
     list-style-type: none;
@@ -34,13 +38,13 @@ main{
     display: flex;
 }
 #side_nav_bar{
-    border-color:rgb(0, 95, 0);
+    border-color:#721A14;
     display: inline-block;
     width: 15vw;
     height: 100vh;
     box-shadow: 5px 6px 10px rgb(109, 108, 108);
     z-index: 999;
-    background-color: rgb(0, 95, 0);
+    background-color: #721A14;
 }
 #side_nav_bar a{
     text-decoration: none;
@@ -48,7 +52,7 @@ main{
     color: rgb(255, 255, 255);
 }
 #side_nav_bar li:hover{
-    background-color: rgb(0, 142, 0);
+    background-color: #e1372b;
 }
 #side_nav_bar li{
     margin: 10px 0px;
@@ -57,16 +61,16 @@ main{
     padding-left: 1vw;
 }
 #responsive_nav{
-    border-color:rgb(0, 95, 0);
+    border-color:#721A14;
     display: none;
     width: 7vw;
     height: 100vh;
     box-shadow: 5px 6px 10px rgb(109, 108, 108);
     z-index: 999;
-    background-color: rgb(0, 95, 0);
+    background-color: #721A14;
 }
 #responsive_nav li:hover{
-    background-color: rgb(0, 142, 0);
+    background-color: #e1372b;
 }
 #responsive_nav a{
     text-decoration: none;
@@ -83,14 +87,12 @@ main{
     display: none;
 }
 #info_per_nav_item{
-    border: solid;
     width: 100%;
     padding: 2% 10%;
-    height: 90vh;   
+    height: 90vh;  
 }
 #top_tasks{
     display: flex;
-    border: solid;
     justify-content: left;
     gap: 15vh;
     flex-wrap: wrap;
@@ -103,6 +105,7 @@ main{
     border-radius: 2vh;
 }
 #deadline{
+    margin-top: 20vh;
     border: solid;
 }
 footer{
@@ -127,6 +130,9 @@ footer{
         width: 20vw;
         border-radius: 2vh;
     }
+    #top_tasks{
+        gap: 5vh;
+    }
 }
 @media screen and (max-width: 800px) {
     #responsive_nav{
@@ -140,8 +146,14 @@ footer{
     #responsive_nav img{
         width: 5vw;
     }
+    #log_book, #tasks{
+        border: solid;
+        height: 30vh;
+        width: 31vw;
+        border-radius: 2vh;
+    }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
     #responsive_nav{
         width: 10vw;
     }
@@ -150,9 +162,20 @@ footer{
     }
     #log_book, #tasks{
         border: solid;
-        height: 35vh;
-        width: 25vw;
+        height: 30vh;
+        width: 30vw;
         border-radius: 2vh;
+    }
+}
+@media screen and (max-width: 450px) {
+    #log_book, #tasks{
+        border: solid;
+        height: 30vh;
+        width: 40vw;
+        border-radius: 2vh;
+    }
+    #top_tasks{
+        justify-content: center;
     }
 }
 @media screen and (max-width: 350px) {
