@@ -16,7 +16,6 @@ fieldset{
     justify-content: center;
     align-items: center;
     gap: 10vh;
-    border: solid;
     width: 100%;
     flex-wrap: wrap;
 }
@@ -37,7 +36,6 @@ fieldset{
 #questions{
     display: flex;
     flex-direction: column;
-    border: solid;
     height: inherit;
     flex-grow: 1;
     gap: 5vh;
@@ -45,13 +43,11 @@ fieldset{
 #answers{
     display: flex;
     flex-direction: column;
-    border: solid;
     height: inherit;
     width: 90%;
 }
 #info{
     display: flex;
-    border: solid;
     width: 30%;
     gap: 2vh;
 }
@@ -63,14 +59,18 @@ button{
     border-radius: 1vh;
     margin-top: 2%;
 }
-@media screen and (max-width: 1050) {
+@media screen and (max-width: 1050px) {
     #picture_change{
-        border: solid black;
-        border-radius: 5vh;
-        height: 40vh;
-        width: 20vw;
-        color: grey;
-        background-color: grey;
-        opacity: 60%;
+        width: 30vw;
+    }
+}
+@media screen and (max-width: 1000px) {
+    #profile_details{
+        flex-direction: column;
+    }
+    #info{
+        margin-left: -25vh;
+        width: 30%;
+        gap: 2vh;
     }
 }
