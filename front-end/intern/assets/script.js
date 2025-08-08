@@ -51,10 +51,3 @@ function closeSupervisor(){
 // function close_all_open(){
 //     auto_close !== 0 ? (closeSupervisor() && closeProfile() && auto_close = 0) : continue;
 // }
-function close_all_open() {
-    if (auto_close !== 0) {
-        closeSupervisor();
-        closeProfile();
-        auto_close = 0;
-    }
-}

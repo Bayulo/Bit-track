@@ -1,0 +1,41 @@
+body{
+    background-color: #ffdddb;
+}
+fieldset{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 25%;
+}
+#picture_change{
+    border: solid black;
+    border-radius: 5vh;
+    height: 40vh;
+    width: 40vh;
+    color: grey;
+    background-color: grey;
+    opacity: 60%;
+}
+#name, #contact, #course, #option{
+    width: inherit;
+}
+#questions{
+    display: flex;
+    flex-direction: column;
+    border: solid;
+    height: inherit;
+}
+#answers{
+    display: flex;
+    flex-direction: column;
+    border: solid;
+    height: inherit;
+    width: 90%;
+}
+#info{
+    display: flex;
+    border: solid;
+    width: 30%;
+    gap: 2vh;
+}
