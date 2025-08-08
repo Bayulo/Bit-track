@@ -87,7 +87,6 @@ main{
     display: none;
 }
 #info_per_nav_item{
-    border: solid;
     width: 100%;
     padding: 2% 10%;
     height: 90vh;  

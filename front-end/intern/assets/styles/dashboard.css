@@ -1,5 +1,5 @@
 body{
-    background-color: #ffccc8;
+    background-color: #ffdddb;
     font-size: 3vh;
     margin: 0 0;
 }
@@ -8,27 +8,177 @@ body{
     padding-top: 2%;
     color: white;
     padding-left: 45%;
-
+    display: none;
+}
+#symbol{
+    color: white;
+    margin-right: 30%;
 }
 #profile_salutation{
-    border-color:#721A14;
     border-radius: 0px 0px 5vh 0px;
     background-color: #721A14;
     padding-top: 5vh;
     padding-bottom: 2vh;
+    padding-left: 2vh;
     box-shadow: 5px 6px 10px rgb(109, 108, 108);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 3vw;
 }
 #profile_button{
+    color: white;
     border: solid;
-    display: inline-block;
-    height: 8vh;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    height: 10vh;
+    width: 10vh;
     border-radius: 50%;
-    margin-left: 2%;
+    background-image: url(/front-end/intern/assets/images/person_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#edit{
+    border: solid;
+    height: 40%;
+    width: 40%;
+    border-radius: 50%;
+    display: none;
+}
+#profile_button:hover{
+    transition: 0.3s;
+    height: 1vh auto;
+    width: 10.5vh;
+    cursor: pointer;
+}
+#profile_button:hover #edit{
+    display: flex;
+    transition: 0.3s;
 }
 #salutation{
     display: inline-block;
-    margin-left: 35%;
     color: white;
+}
+#profile_info{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh;
+    border: solid;
+    color: white;
+    background-color: #721A14;
+    position: absolute;
+    margin-left: 20%;
+    width: 60vw;
+    height: 70vh;
+    border-radius: 3vh;
+}
+#close_profile_info{
+    align-self: flex-end;
+}
+#close_profile_info img{
+    height: 5vh;
+    width: 5vh;
+    padding: 1vh;
+    border-radius: 3vh;
+    margin: 1vh;
+}
+#close_profile_info img:hover{
+    cursor: pointer;
+    background-color: #e1372b;
+}
+#profile_details_1 img{
+    height: 20vh;
+    width: 20vh;
+    border: solid;
+    border-radius: 50%;
+}
+#profile_details_1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    width: auto;
+    gap: 2vh;
+}
+#profile_details_1 span{
+    text-align: center;
+}
+#profile_details_2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5vw;
+}
+#profile_details_2_1, #profile_details_2_2{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6vw;
+}
+#edit_profile{
+    border: solid;
+    border-radius: 3vh;
+    width: 8vw;
+    height: auto;
+    text-align: center;
+}
+#edit_profile:hover{
+    background-color: #e1372b;
+    cursor: pointer;
+}
+#supervisor_info{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh;
+    border: solid;
+    color: white;
+    background-color: #721A14;
+    position: absolute;
+    margin-left: 20%;
+    width: 60vw;
+    height: 70vh;
+    border-radius: 3vh;
+}
+#supervisor_details{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4vh;
+    margin-top: 3%;
+    flex-wrap: wrap;
+}
+#close_supervisor_info{
+    height: 5vh;
+    width: 5vh;
+    padding: 1vh;
+    border-radius: 3vh;
+    align-self: flex-end;
+    margin: 1vh;
+}
+#close_supervisor_info:hover{
+    cursor: pointer;
+    background-color: #e1372b;
+}
+#supervisor_label{
+    margin-top: -4vh;
+    font-size: 4.5vh;
+}
+#supervisor_details img{
+    height: 30vh;
+    width: 30vh;
+    border: solid;
+    border-radius: 50%;
+}
+#supervisor_details span{
+    text-align: center;
+}
+#name_and_contact{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
 }
 ul{
     list-style-type: none;
@@ -83,13 +233,29 @@ main{
     height: auto;
     padding-left: 1vw;
 }
+.pic{
+    display: inline-block;
+    margin-top: -10%;
+}
+#pic{
+    margin-top: -10%;
+    padding-top: 4%;
+}
+#pic img{
+    height: 4vh;
+}
+.logout{
+    display: flex;
+    justify-content: left; 
+    align-items: center; 
+}
 .view_on_mobile{
     display: none;
 }
 #info_per_nav_item{
     width: 100%;
     padding: 2% 10%;
-    height: 90vh;  
+    height: 90vh;
 }
 #top_tasks{
     display: flex;
@@ -146,11 +312,17 @@ footer{
     #responsive_nav img{
         width: 5vw;
     }
+    #edit_profile{
+        width: 12vw;
+    }
     #log_book, #tasks{
         border: solid;
         height: 30vh;
         width: 31vw;
         border-radius: 2vh;
+    }
+    #supervisor_details{
+        flex-direction: column;
     }
 }
 @media screen and (max-width: 600px) {
@@ -166,6 +338,28 @@ footer{
         width: 30vw;
         border-radius: 2vh;
     }
+    #symbol{
+        display: none;
+    }
+    #logo{
+        display: block;
+    }
+    #profile_salutation{
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 550px) {
+    #profile_details_1{
+        width: 20vh;
+        flex-direction: column;
+    }
+    #profile_info{
+        width:70vw;
+        height: 80vh;
+    }
+    #edit_profile{
+        width: 15vw;
+    }
 }
 @media screen and (max-width: 450px) {
     #log_book, #tasks{
@@ -177,12 +371,34 @@ footer{
     #top_tasks{
         justify-content: center;
     }
+    #edit_profile{
+        width: 20vw;
+    }
 }
 @media screen and (max-width: 350px) {
     #responsive_nav{
         width: 12vw;
     }
-     #responsive_nav img{
-        width: 10vw;
+    #responsive_nav img{
+        width: 7vw;
+    }
+    #supervisor_details img{
+        height: 20vh;
+        width: 20vh;
+    }
+    #supervisor_label{
+        font-size: 3.5vh;
+    }
+    #supervisor_info{
+        width: 70vw;
+    }
+    #profile_details_1 img{
+        height: 15vh;
+        width: 15vh;
+        border: solid;
+        border-radius: 50%;
+    }
+    #profile_info{
+        height: 70vh;
     }
 }
