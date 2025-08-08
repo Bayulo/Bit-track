@@ -1,30 +1,46 @@
 body{
     background-color: #ffdddb;
+    font-size: 3vh;
 }
 fieldset{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25%;
+    flex-wrap: wrap;
+}
+#profile_details{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 25%;
+    gap: 10vh;
+    border: solid;
+    width: 100%;
+    flex-wrap: wrap;
 }
 #picture_change{
     border: solid black;
     border-radius: 5vh;
     height: 40vh;
-    width: 40vh;
+    width: 20vw;
     color: grey;
     background-color: grey;
     opacity: 60%;
 }
-#name, #contact, #course, #option{
-    width: inherit;
+#name, #contact, #course, #option, #sex{
+    width: 50vh;
+    height: 4vh;
+    border-radius: 2vh;
 }
 #questions{
     display: flex;
     flex-direction: column;
     border: solid;
     height: inherit;
+    flex-grow: 1;
+    gap: 5vh;
 }
 #answers{
     display: flex;
@@ -38,4 +54,23 @@ fieldset{
     border: solid;
     width: 30%;
     gap: 2vh;
+}
+button{
+    color: white;
+    background-color: #721A14;
+    width: 15vh;
+    height: 6vh;
+    border-radius: 1vh;
+    margin-top: 2%;
+}
+@media screen and (max-width: 1050) {
+    #picture_change{
+        border: solid black;
+        border-radius: 5vh;
+        height: 40vh;
+        width: 20vw;
+        color: grey;
+        background-color: grey;
+        opacity: 60%;
+    }
 }
