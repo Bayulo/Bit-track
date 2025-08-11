@@ -19,7 +19,16 @@ fieldset{
     width: 100%;
     flex-wrap: wrap;
 }
+#image_details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+}
 #picture_change{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: solid black;
     border-radius: 5vh;
     height: 40vh;
@@ -27,11 +36,26 @@ fieldset{
     color: grey;
     background-color: grey;
     opacity: 60%;
+    min-width: 250px;
+}
+#plus{
+    color: black;
+    font-size: 8vw;
+}
+#info{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    gap: 2vh;
+    max-width: 400px;
 }
 #name, #contact, #course, #option, #sex{
-    width: 50vh;
+    width: auto;
     height: 4vh;
     border-radius: 2vh;
+}
+select{
+    margin-bottom: 4.6vh;
 }
 #questions{
     display: flex;
@@ -45,11 +69,8 @@ fieldset{
     flex-direction: column;
     height: inherit;
     width: 90%;
-}
-#info{
-    display: flex;
-    width: 30%;
-    gap: 2vh;
+    max-width: 350px;
+    min-width: 200px;
 }
 button{
     color: white;
@@ -58,19 +79,4 @@ button{
     height: 6vh;
     border-radius: 1vh;
     margin-top: 2%;
-}
-@media screen and (max-width: 1050px) {
-    #picture_change{
-        width: 30vw;
-    }
-}
-@media screen and (max-width: 1000px) {
-    #profile_details{
-        flex-direction: column;
-    }
-    #info{
-        margin-left: -25vh;
-        width: 30%;
-        gap: 2vh;
-    }
 }

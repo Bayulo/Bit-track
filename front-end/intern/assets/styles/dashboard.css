@@ -3,6 +3,10 @@ body{
     font-size: 3vh;
     margin: 0 0;
 }
+#back_blur{
+    height: 100%;
+    width: 100%;
+}
 #logo{
     background-color: #721A14;
     padding-top: 2%;
@@ -277,6 +281,36 @@ main{
     height: 25vh;
     width: 15vw;
     border-radius: 2vh;
+}
+#log_book_follow-up{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid;
+    color: white;
+    background-color: #721A14;
+    position: absolute;
+    margin-top: -12%;
+    width: 60vw;
+    height: 80vh;
+    border-radius: 3vh;
+}
+#calendar{
+    border: solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60vh;
+    min-width: 200px;
+    border-radius: 2vh;
+}
+#head{
+    border: solid;
+    display: flex;
+    width: 100%;
+}
+#next{
+    margin-left: auto;
 }
 #deadline{
     margin-top: 20vh;

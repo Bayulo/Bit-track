@@ -51,3 +51,31 @@ function closeSupervisor(){
 // function close_all_open(){
 //     auto_close !== 0 ? (closeSupervisor() && closeProfile() && auto_close = 0) : continue;
 // }
+
+
+// const change_image_button = document.getElementById("change_image");
+// const image_upload = document.getElementById("image_upload");
+// const picture_change = document.getElementById("picture_change");
+// console.dir(image_upload);
+
+// change_image_button.addEventListener("click", (event) => {
+//     event.preventDefault();
+//     const file = image_upload.files[0];
+//     if (file) {
+//         const reader = new FileReader();
+//         reader.onload = () => {
+//             const imageDataUrl = reader.result;
+//             picture_change.innerHTML = `<img src="${imageDataUrl} alt="uploaded image" height="100px" width="100px">`;
+//         };
+//         reader.readAsDataURL(file);
+//     }
+// });
+
+
+//Calendar
+const month_year = document.getElementById("month-year");
+
+const months = [January, February, March, April, May, June, July, August, Septemeber, October, November, December];
+let current_date = new Date();
+let today = new Date();
+

@@ -15,7 +15,11 @@
             <fieldset>
                 <legend>Profile Details</legend>
                 <div id="profile_details">
-                    <div id="picture_change"></div>
+                    <div id="image_details">
+                        <input type="file" accept="image/*" id="image_upload" name="change Image">
+                        <div id="picture_change"><span id="plus">+</span></div>
+                        <button id="change_image">Change Image</button>
+                    </div>
                     <div id="info">
                         <div id="questions">
                             <label for="name">Name: </label>
@@ -26,10 +30,24 @@
                         </div>
                         <div id="answers">
                             <input type="text" name="" id="name"><br>
-                            <input type="number" name="" id="contact"><br>
-                            <input type="text" name="" id="course"><br>
-                            <input type="text" name="" id="option"><br>
-                            <input type="text" name="" id="sex">
+                            <input type="number" name="" id="contact" value="237"><br>
+                            <select id="course">
+                                <option value="-">---</option>
+                                <option value="Software">Software</option>
+                                <option value="Hardware">Hardware</option>
+                            </select>
+                            <select id="option">
+                                <option value="-">---</option>
+                                <option value="Front-end web">Front-end web development</option>
+                                <option value="Back-end">Back-end web development</option>
+                                <option value="Mobile">Mobile development</option>
+                                <option value="Back-end">Cybersecurity-Network</option>
+                            </select>
+                            <select id="sex">
+                                <option value="-">---</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -40,5 +58,6 @@
     <footer>
 
     </footer>
+    <script src="/front-end/intern/assets/script.js"></script>
 </body>
 </html>
