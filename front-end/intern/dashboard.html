@@ -9,12 +9,14 @@
 </head>
 
 <body>
-    <div id="back_blur">
-            <header>
+    <div id="back_blur" onclick="closeSupervisor(), closeProfile()"></div>
+    <header>
         <div id="logo">Bit Track</div>
         <div id="profile_salutation">
             <div id="symbol">Bit Track</div>
-            <div id="profile_button" onclick="showProfile()" title="View/Edit Profile"><div id="edit"><!--edit--></div></div>
+            <div id="profile_button" onclick="showProfile()" title="View/Edit Profile">
+                <div id="edit"><!--edit--></div>
+            </div>
             <div id="salutation">
                 Hi <span>....</span>.
             </div>
@@ -24,10 +26,13 @@
         <nav>
             <div id="profile_info">
                 <div id="close_profile_info">
-                    <img onclick="closeProfile()" id="close_profile" src="/front-end/intern/assets/images/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="close">
+                    <img onclick="closeProfile()" id="close_profile"
+                        src="/front-end/intern/assets/images/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"
+                        alt="close">
                 </div>
                 <div id="profile_details_1">
-                    <img src="/front-end/intern/assets/images/person_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png" alt="my_profile_pc">
+                    <img src="/front-end/intern/assets/images/person_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png"
+                        alt="my_profile_pc">
                     <span>Bayuga Lordley</span>
                 </div>
                 <div id="profile_details_2">
@@ -44,13 +49,17 @@
                         <span>+237 677 777 777</span>
                     </div>
                 </div>
-                <a href="/front-end/intern/edit_profile.html"><div id="edit_profile">Edit</div></a>
+                <a href="/front-end/intern/edit_profile.html">
+                    <div id="edit_profile">Edit</div>
+                </a>
             </div>
             <div id="supervisor_info">
-                <img onclick="closeSupervisor()" id="close_supervisor_info" src="/front-end/intern/assets/images/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="close">
+                <img onclick="closeSupervisor()" id="close_supervisor_info"
+                    src="/front-end/intern/assets/images/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="close">
                 <div id="supervisor_label">Supervisor</div>
                 <div id="supervisor_details">
-                    <img src="/front-end/intern/assets/images/person_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png" alt="supervisors picture">
+                    <img src="/front-end/intern/assets/images/person_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png"
+                        alt="supervisors picture">
                     <div id="name_and_contact">
                         <span>Mr. Bayuga Lordley</span>
                         <span>+237 677 777 777</span>
@@ -65,9 +74,10 @@
                     <li><a href="#">Settings</a></li>
                     <li><a href="#">Help</a></li>
                     <div class="pic">
-                        <li><a href="#">Logout <img src="/front-end/intern/assets/images/login_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" height="20vh">
+                        <li><a href="#">Logout <img
+                                    src="/front-end/intern/assets/images/login_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"
+                                    height="20vh">
                     </div></a></li>
-
                 </ul>
             </div>
             <div id="responsive_nav">
@@ -119,12 +129,10 @@
                     <div id="days"></div>
                 </div>
             </div>
-            
+
             <div id="deadline">Your internship ends in <span>.....</span></div>
         </div>
     </main>
-
-    </div>
     <footer>
         &copy; Bits Valley 2025
     </footer>
