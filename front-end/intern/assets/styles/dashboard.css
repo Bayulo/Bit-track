@@ -2,6 +2,7 @@ body{
     background-color: #ffdddb;
     font-size: 3vh;
     margin: 0 0;
+    min-width: 304px;
 }
 #back_blur{
     height: 100vh;
@@ -17,7 +18,7 @@ body{
     color: white;
     padding-left: 45%;
     display: none;
-    width: 100vw;
+    width: auto;
 }
 #symbol{
     color: white;
@@ -231,7 +232,7 @@ main{
 #responsive_nav{
     display: none;
     width: 7vw;
-    height: 100vh;
+    height: 100%;
     box-shadow: 5px 6px 10px rgb(109, 108, 108);
     background-color: #721A14;
 }
@@ -269,18 +270,24 @@ main{
     display: none;
 }
 #info_per_nav_item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     padding: 2% 10%;
-    height: 90vh;
+    height: 100vh;
+    min-height: auto;
+    flex-wrap: wrap;
+    gap: 25%;
 }
 #top_tasks{
     display: flex;
     justify-content: left;
-    gap: 15vh;
+    gap: 10vh;
     flex-wrap: wrap;
     align-items: center;
 }
-#log_book, #tasks{
+#log_book, #tasks, #announcement{
     border: solid;
     height: 25vh;
     width: 15vw;
@@ -294,7 +301,6 @@ main{
     color: white;
     background-color: #721A14;
     position: absolute;
-    margin-top: -12%;
     width: 60vw;
     height: 80vh;
     border-radius: 3vh;
@@ -309,15 +315,31 @@ main{
     border-radius: 2vh;
 }
 #head{
-    border: solid;
     display: flex;
-    width: 100%;
+    width: 90%;
+    margin: 4%;
 }
 #next{
     margin-left: auto;
 }
+#month_year{
+    border: solid;
+    width: 100%;
+    text-align: center;
+}
+#weekdays{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8%;
+}
+#days{
+    border: solid;
+    display: flex;
+    flex-wrap: wrap;
+}
 #deadline{
-    margin-top: 20vh;
+    height: fit-content;
     border: solid;
 }
 footer{
@@ -336,10 +358,9 @@ footer{
         padding: 1vw;
         width: 4vw;
     }
-    #log_book, #tasks{
-        border: solid;
+    #log_book, #tasks, #announcement{
         height: 30vh;
-        width: 20vw;
+        width: 25vw;
         border-radius: 2vh;
     }
     #top_tasks{
@@ -361,8 +382,7 @@ footer{
     #edit_profile{
         width: 12vw;
     }
-    #log_book, #tasks{
-        border: solid;
+    #log_book, #tasks, #announcement{
         height: 30vh;
         width: 31vw;
         border-radius: 2vh;
@@ -378,8 +398,7 @@ footer{
      #responsive_nav img{
         width: 6vw;
     }
-    #log_book, #tasks{
-        border: solid;
+    #log_book, #tasks, #announcement{
         height: 30vh;
         width: 30vw;
         border-radius: 2vh;
@@ -392,6 +411,7 @@ footer{
     }
     #profile_salutation{
         justify-content: center;
+        width: auto;
     }
 }
 @media screen and (max-width: 550px) {
@@ -408,11 +428,14 @@ footer{
     }
 }
 @media screen and (max-width: 450px) {
-    #log_book, #tasks{
-        border: solid;
-        height: 30vh;
+    #log_book, #tasks, #announcement{
+        height: 20vh;
         width: 40vw;
         border-radius: 2vh;
+    }
+    #info_per_nav_item{
+        height: max-content;
+        gap: 5vh;
     }
     #top_tasks{
         justify-content: center;
@@ -436,7 +459,7 @@ footer{
         font-size: 3.5vh;
     }
     #supervisor_info{
-        width: 70vw;
+        min-width: 70vw;
     }
     #profile_details_1 img{
         height: 15vh;
@@ -446,5 +469,6 @@ footer{
     }
     #profile_info{
         height: 70vh;
+        min-width: 240px;
     }
 }

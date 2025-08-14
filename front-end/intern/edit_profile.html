@@ -16,9 +16,10 @@
                 <legend>Profile Details</legend>
                 <div id="profile_details">
                     <div id="image_details">
-                        <input type="file" accept="image/*" id="image_upload" name="change Image">
-                        <div id="picture_change"><span id="plus">+</span></div>
-                        <button id="change_image">Change Image</button>
+                        <input type="file" accept="image/jpeg, image/png, image/jpg" id="image_upload" name="change Image">
+                        <img src="/front-end/intern/assets/images/person_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png" id="picture_change">
+                        <!-- <div id="picture_change"><span id="plus">+</span></div> -->
+                        <label for="image_upload" id="img_change">Change Image</label>
                     </div>
                     <div id="info">
                         <div id="questions">
@@ -30,7 +31,7 @@
                         </div>
                         <div id="answers">
                             <input type="text" name="" id="name"><br>
-                            <input type="number" name="" id="contact" value="237"><br>
+                            <input type="text" name="" id="contact" value="237"><br>
                             <select id="course">
                                 <option value="-">---</option>
                                 <option value="Software">Software</option>

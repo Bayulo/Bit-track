@@ -8,7 +8,7 @@ function show_menu(){
 
     icon.setAttribute("src", "/front-end/intern/assets/images/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png");
     items.forEach(item => {item.style.display = "block"; item.style.height = "6vh"});
-    responsive_nav.style.width = "30vw";
+    responsive_nav.style.width = "40vw";
     responsive_nav.style.position = "absolute";
 }
 
@@ -19,31 +19,35 @@ function hide_menu(){
 
     icon.setAttribute("src", "/front-end/intern/assets/images/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png");
     items.forEach(item => item.style.display = "none");
-    responsive_nav.style.width = "9vw";
+    responsive_nav.style.width = "12vw";
     responsive_nav.style.position = "static";
+    // popup_is_open = false;
 }
 
 function showNavbar() {
     if (!isOpen) {
         // Show menu
-        popupBackground();
         show_menu();
+        popup_is_open = true;
+        popupBackground();
     } else { // Hide menu
         hide_menu();
+        popup_is_open = false;
+        popupBackground();
     }
     isOpen = !isOpen; // Flip the toggle
 }
 
 
 function showProfile(){
-    popup_is_open = false;
+    popup_is_open = true;
     const profile_icon = document.getElementById("profile_info");
     profile_icon.style.display = "flex";
     popupBackground();
 }
 
 function closeProfile(){
-    popup_is_open = true;
+    popup_is_open = false;
     const close_profile = document.getElementById("profile_info");
     close_profile.style.display = "none";
     popupBackground();
@@ -52,27 +56,27 @@ function closeProfile(){
 function showSupervisor(){
     const supervisor = document.getElementById("supervisor_info");
     supervisor.style.display = "flex";
-    popup_is_open = false;
+    popup_is_open = true;
     popupBackground();
     hide_menu();
 }
 
 function closeSupervisor(){
-    popup_is_open = true;
+    popup_is_open = false;
     const supervisor = document.getElementById("supervisor_info");
     supervisor.style.display = "none";
     popupBackground();
-
 }
 let popup_is_open = false;
 function popupBackground(){
     const background = document.getElementById("back_blur");
-    if(!popup_is_open){
+    if(popup_is_open){
         background.style.display = "block";
         background.addEventListener("click", function closePopup(){
             background.style.display = "none";
             hide_menu();
             popup_is_open = false;
+            isOpen = false;
         })
     }
     else{
@@ -81,34 +85,41 @@ function popupBackground(){
     }
     
 }
-// function close_all_open(){
-//     auto_close !== 0 ? (closeSupervisor() && closeProfile() && auto_close = 0) : continue;
+
+//edit page image upload
+// const image_input = document.getElementById("image_upload");
+// const picture_display = document.getElementById("picture_change");
+
+// image_input.onchange = function change_pic(){
+//     picture_display.src = URL.createObjectURL(image_input.files[0]);
 // }
 
-
-// const change_image_button = document.getElementById("change_image");
-// const image_upload = document.getElementById("image_upload");
-// const picture_change = document.getElementById("picture_change");
-// console.dir(image_upload);
-
-// change_image_button.addEventListener("click", (event) => {
-//     event.preventDefault();
-//     const file = image_upload.files[0];
-//     if (file) {
-//         const reader = new FileReader();
-//         reader.onload = () => {
-//             const imageDataUrl = reader.result;
-//             picture_change.innerHTML = `<img src="${imageDataUrl} alt="uploaded image" height="100px" width="100px">`;
-//         };
-//         reader.readAsDataURL(file);
-//     }
-// });
-
-
 //Calendar
-const month_year = document.getElementById("month-year");
+const month_year = document.getElementById("month_year");
+const days_container = document.getElementById("days");
+const next_month = document.getElementById("next");
+const prev_month = document.getElementById("prev");
+let month_control = 1;
 
-const months = [January, February, March, April, May, June, July, August, Septemeber, October, November, December];
-let current_date = new Date();
-let today = new Date();
+prev_month.onclick = function(){
+    
+}
 
+function show_month(control){
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "Septemeber", "October", "November", "December"];
+    let today = new Date();
+    const year = today.getFullYear();
+    const month = today.getMonth();
+    const last_day = new Date(year, month+control, 0).getDate();
+    month_year.textContent = `${months[month]} ${year}`;
+
+    for(let i = 1; i <= last_day; i++){
+        const day_div = document.createElement("div");
+        day_div.innerHTML += `${i}`;
+        if (i === today.getDate && month === today.getMonth() && year === today.getFullYear()){
+            day_div.classList.add("today");
+        }
+        days_container.appendChild(day_div);
+    }
+}
+show_month(month_control);
