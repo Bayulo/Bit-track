@@ -296,22 +296,26 @@ main{
 #log_book_follow-up{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     border: solid;
     color: white;
     background-color: #721A14;
     position: absolute;
-    width: 60vw;
+    width: 70vw;
+    min-width: 300px;
     height: 80vh;
+    max-height: 600px;
     border-radius: 3vh;
+    margin-left: -10%;
+    margin-top: -2%;
 }
 #calendar{
     border: solid;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 60vh;
-    min-width: 200px;
+    width: 48vh;
     border-radius: 2vh;
 }
 #head{
@@ -323,7 +327,6 @@ main{
     margin-left: auto;
 }
 #month_year{
-    border: solid;
     width: 100%;
     text-align: center;
 }
@@ -331,12 +334,43 @@ main{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 8%;
+    margin-bottom: 2%;
+    width: 100%;
+}
+#weekdays div{
+    width: 14.2%;
+    text-align: center;
+}
+#days div{
+    width: 14.2%;
+    text-align: center;
+    border-radius: 1vh;
+    margin-bottom: 2%;
+    height: 6vh;
 }
 #days{
-    border: solid;
     display: flex;
     flex-wrap: wrap;
+}
+#days div{
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+#days div:hover{
+    color: #e1372b;
+    background-color:#ffdddb;
+}
+#days .today{
+    background-color: #e1372b;
+    color: #ffdddb;
+}
+#fill{
+    border: solid;
+    width: 8%;
+    min-width: 50px;
+    text-align: center;
+    border-radius: 8vw;
+    margin-top: 7%;
 }
 #deadline{
     height: fit-content;

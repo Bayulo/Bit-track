@@ -105,21 +105,26 @@ prev_month.onclick = function(){
     
 }
 
-function show_month(control){
+let current_date = new Date();
+let today = new Date();
+
+function show_month(date){
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "Septemeber", "October", "November", "December"];
-    let today = new Date();
-    const year = today.getFullYear();
-    const month = today.getMonth();
-    const last_day = new Date(year, month+control, 0).getDate();
+    const year = date.getFullYear();
+    const month = date.getMonth();
+    const first_day = new Date(year, month, 1).getDate();
+    const last_day = new Date(year, month+1, 0).getDate();
+
     month_year.textContent = `${months[month]} ${year}`;
 
+    //current month's dates
     for(let i = 1; i <= last_day; i++){
         const day_div = document.createElement("div");
-        day_div.innerHTML += `${i}`;
-        if (i === today.getDate && month === today.getMonth() && year === today.getFullYear()){
+        day_div.textContent = `${i}`;
+        if (i === today.getDate() && month === today.getMonth() && year === today.getFullYear()){
             day_div.classList.add("today");
         }
         days_container.appendChild(day_div);
     }
 }
-show_month(month_control);
+show_month(current_date);
