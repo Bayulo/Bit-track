@@ -95,36 +95,75 @@ function popupBackground(){
 // }
 
 //Calendar
+const internship_start = new Date(2025, 7, 1) //That is; 2025 August 1st (to be amended)
+const internship_stop = new Date(2025, 9, 31) //That is;  2025 September 30th (to be amended)
 const month_year = document.getElementById("month_year");
 const days_container = document.getElementById("days");
-const next_month = document.getElementById("next");
-const prev_month = document.getElementById("prev");
-let month_control = 1;
+const next_month_button = document.getElementById("next");
+const prev_month_button = document.getElementById("prev");
 
-prev_month.onclick = function(){
-    
-}
 
 let current_date = new Date();
 let today = new Date();
 
-function show_month(date){
-    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "Septemeber", "October", "November", "December"];
-    const year = date.getFullYear();
-    const month = date.getMonth();
-    const first_day = new Date(year, month, 1).getDate();
-    const last_day = new Date(year, month+1, 0).getDate();
+document.addEventListener("DOMContentLoaded", function (){
+    function show_month(date){
+        days_container.innerHTML = ""; 
+        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        const year = date.getFullYear();
+        const month = date.getMonth();
+        const first_day = new Date(year, month, 1).getDay();
+        const last_day = new Date(year, month+1, 0).getDate();
 
-    month_year.textContent = `${months[month]} ${year}`;
-
-    //current month's dates
-    for(let i = 1; i <= last_day; i++){
-        const day_div = document.createElement("div");
-        day_div.textContent = `${i}`;
-        if (i === today.getDate() && month === today.getMonth() && year === today.getFullYear()){
-            day_div.classList.add("today");
+        month_year.textContent = `${months[month]} ${year}`;
+        
+        //previous month's dates
+        const prev_Month_last_day = new Date(year, month, 0).getDate();
+        for(let i = first_day; i > 1; i--){
+            const day_div = document.createElement("div");
+            day_div.textContent = prev_Month_last_day - i + 1;
+            day_div.classList.add("fade");
+            days_container.appendChild(day_div);
         }
-        days_container.appendChild(day_div);
-    }
-}
-show_month(current_date);
+
+        //current month's dates
+        for(let i = 1; i <= last_day; i++){
+            const day_div = document.createElement("div");
+            day_div.textContent = `${i}`;
+            //indicate internship span
+            if (i >= internship_start.getDate() && i <= internship_stop.getDate() && month >= internship_start.getMonth() && month <= internship_stop.getMonth() && year >= internship_start.getFullYear() && year <= internship_stop.getFullYear()){
+                day_div.classList.add("internship_span");
+                const attendance = document.getElementsByClassName("internship_span");
+                attendance.onclick = function show_filled_attendance(){
+                    //pop filled info
+                };
+            }
+            //indicate today
+            if (i === today.getDate() && month === today.getMonth() && year === today.getFullYear()){
+                day_div.classList.add("today");
+            }
+
+            days_container.appendChild(day_div);
+        }
+        //next month's dates
+        const next_month_start_day = 7 - new Date(year, month + 1, 0).getDay()-1;
+        for(let i = 1; i <= next_month_start_day+1; i++){
+            const day_div = document.createElement("div");
+            day_div.textContent = i;
+            day_div.classList.add("fade");
+            days_container.appendChild(day_div);
+        }
+    }   
+    //full previous month
+    prev_month_button.addEventListener("click", function () {
+        current_date.setMonth(current_date.getMonth() - 1);
+        show_month(current_date);
+    });
+
+    //full next month
+    next_month_button.addEventListener("click", function () {
+        current_date.setMonth(current_date.getMonth() + 1);
+        show_month(current_date);
+    });
+    show_month(current_date);
+});

@@ -294,7 +294,7 @@ main{
     border-radius: 2vh;
 }
 #log_book_follow-up{
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -310,6 +310,18 @@ main{
     margin-left: -10%;
     margin-top: -2%;
 }
+#log_book_follow-up img{
+    height: 6vh;
+    width: 4%;
+    margin-left: auto;
+    margin-top: -3vh;
+    margin-right: 1vw;
+    margin-bottom: 2vh;
+    border-radius: 1rem;
+}
+#log_book_follow-up img:hover{
+    background-color: #e1372b;
+}
 #calendar{
     border: solid;
     display: flex;
@@ -317,6 +329,7 @@ main{
     align-items: center;
     width: 48vh;
     border-radius: 2vh;
+    overflow: hidden;
 }
 #head{
     display: flex;
@@ -348,9 +361,11 @@ main{
     margin-bottom: 2%;
     height: 6vh;
 }
+
 #days{
     display: flex;
     flex-wrap: wrap;
+    height: 40vh;
 }
 #days div{
     cursor: pointer;
@@ -363,6 +378,12 @@ main{
 #days .today{
     background-color: #e1372b;
     color: #ffdddb;
+}
+#days .fade{
+    color: #9c9a9a;
+}
+#days .internship_span{
+    background-color: green;
 }
 #fill{
     border: solid;
