@@ -288,14 +288,42 @@ main{
     align-items: center;
 }
 #log_book, #tasks, #announcement{
-    border: solid;
     height: 25vh;
     width: 15vw;
     border-radius: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#log_book_img{
+    background-image: url(/front-end/intern/assets/images/log_book.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1rem;
+    width: 90%;
+    height: 80%;
+}
+#announcements_img{
+    background-image: url(/front-end/intern/assets/images/announcement.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1rem;
+    width: 90%;
+    height: 80%;
+}
+#tasks_img{
+    background-image: url(/front-end/intern/assets/images/tasks.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1rem;
+    width: 90%;
+    height: 80%;
 }
 #log_book:hover, #tasks:hover, #announcement:hover{
     scale: 1.1;
     transition: 0.3s;
+    box-shadow: 0px 5px 5px 0px;
 }
 #log_book_follow_up{
     display: none;
