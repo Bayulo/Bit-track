@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div id="back_blur" onclick="closeSupervisor(), closeProfile()"></div>
+    <div id="back_blur" onclick="closeSupervisor(), closeProfile(), closeCalendar()"></div>
     <header>
         <div id="logo">Bit Track</div>
         <div id="profile_salutation">
@@ -68,10 +68,10 @@
             </div>
             <div id="side_nav_bar">
                 <ul>
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href="#">Fellow interns</a></li>
+                    <li id="button_dashboard"><a href="#">Dashboard</a></li>
+                    <li id="button_interns"><a href="#">Fellow interns</a></li>
                     <li onclick="showSupervisor()" id="supervisor_select"><a href="#">Supervisor</a></li>
-                    <li><a href="#">Settings</a></li>
+                    <li id="button_settings"><a href="#">Settings</a></li>
                     <li><a href="#">Help</a></li>
                     <div class="pic">
                         <li><a href="#">Logout <img
@@ -85,10 +85,10 @@
                     <li onclick=showNavbar()><a href="#"><img id="open_close_nav"
                                 src="/front-end/intern/assets/images/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"></a>
                     </li>
-                    <li class="view_on_mobile"><a href="#">Dashboard</a></li>
-                    <li class="view_on_mobile"><a href="#">Fellow interns</a></li>
+                    <li class="view_on_mobile" id="button_dashboard"><a href="#">Dashboard</a></li>
+                    <li class="view_on_mobile" id="button_interns"><a href="#">Fellow interns</a></li>
                     <li onclick="showSupervisor()" class="view_on_mobile"><a href="#">Supervisor</a></li>
-                    <li class="view_on_mobile"><a href="#">Settings</a></li>
+                    <li class="view_on_mobile" id="button_settings"><a href="#">Settings</a></li>
                     <li class="view_on_mobile"><a href="#">Help</a></li>
                     <div id="pic">
                         <li class="view_on_mobile">
@@ -104,14 +104,14 @@
                 </ul>
             </div>
         </nav>
-        <div id="info_per_nav_item">
+        <div id="info_per_nav_item_dashboard">
             <div id="top_tasks">
-                <div id="log_book">Daily Logbook</div>
+                <div id="log_book" onclick="showCalendar()">Daily Logbook</div>
                 <div id="tasks">Tasks</div>
                 <div id="announcement">Announcement</div>
             </div>
-            <div id="log_book_follow-up">
-                <img src="/front-end/intern/assets/images/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png">
+            <div id="log_book_follow_up">
+                <img onclick="closeCalendar()" src="/front-end/intern/assets/images/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" id="calendar_close">
                 <div id="calendar">
                     <div id="head">
                         <div id="prev">Prev</div>
@@ -129,10 +129,61 @@
                     </div>
                     <div id="days"></div>
                 </div>
-                <div id="fill">Fill</div>
+                NB: You can only fill for this current Day.<br>
+                This is also your daily attendance.
+                <a href="/front-end/intern/fill.html"><div id="fill">Fill</div></a>
             </div>
 
             <div id="deadline">Your internship ends in <span>.....</span></div>
+        </div>
+        <div id="info_per_nav_item_fellow_interns">
+            <div class="interns_holder">
+                <div id="intern_1_image"></div>
+                <div id="intern_1_name">Clair</div>
+                <div id="intern_1_contact">677 777 777</div>
+            </div>
+            <div class="interns_holder">
+                <div id="intern_2_image"></div>
+                <div id="intern_2_name">Elias</div>
+                <div id="intern_2_contact">677 777 777</div>
+            </div>
+            <div class="interns_holder">
+                <div id="intern_3_image"></div>
+                <div id="intern_3_name">Grace</div>
+                <div id="intern_3_contact">677 777 777</div>
+            </div>
+        </div>
+        <div id="info_per_nav_item_settings">
+            <div id="font_alter">
+                Fonts:
+                <div id="font_list">
+                    <div class="fonts"><div id="font_toogle_1"></div>Default font</div>
+                    <div class="fonts"><div id="font_toogle_2"></div>Font A</div>
+                    <div class="fonts"><div id="font_toogle_3"></div>Font B</div>
+                    <div class="fonts"><div id="font_toogle_4"></div>Font C</div>
+                    <div class="fonts"><div id="font_toogle_5"></div>Font D</div>
+                </div>
+            </div>
+            <div id="color_alter">
+                Colours:
+                <div id="color_list">
+                    <div class="colors">
+                        <div id="color_toogle_1"></div>Defualt colour
+                    </div>
+                    <div class="colors">
+                        <div id="color_toogle_2"></div>Green
+                    </div>
+                    <div class="colors">
+                        <div id="color_toogle_3"></div>Orange
+                    </div>
+                    <div class="colors">
+                        <div id="color_toogle_4"></div>Blue
+                    </div>
+                    <div class="colors">
+                        <div id="color_toogle_5"></div>Purple
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <footer>

@@ -67,6 +67,22 @@ function closeSupervisor(){
     supervisor.style.display = "none";
     popupBackground();
 }
+
+function showCalendar(){
+    const log_book_follow = document.getElementById("log_book_follow_up");
+    log_book_follow.style.display = "flex";
+    popup_is_open = true;
+    popupBackground();
+    hide_menu();
+}
+
+function closeCalendar(){
+    popup_is_open = false;
+    const log_book_follow = document.getElementById("log_book_follow_up");
+    log_book_follow.style.display = "none";
+    popupBackground();
+}
+
 let popup_is_open = false;
 function popupBackground(){
     const background = document.getElementById("back_blur");
@@ -85,14 +101,6 @@ function popupBackground(){
     }
     
 }
-
-//edit page image upload
-// const image_input = document.getElementById("image_upload");
-// const picture_display = document.getElementById("picture_change");
-
-// image_input.onchange = function change_pic(){
-//     picture_display.src = URL.createObjectURL(image_input.files[0]);
-// }
 
 //Calendar
 const internship_start = new Date(2025, 7, 1) //That is; 2025 August 1st (to be amended)
@@ -167,3 +175,28 @@ document.addEventListener("DOMContentLoaded", function (){
     });
     show_month(current_date);
 });
+
+const button_dashboard = document.getElementById("button_dashboard");
+const button_interns = document.getElementById("button_interns");
+const button_settings = document.getElementById("button_settings");
+
+const dashboard_info = document.getElementById("info_per_nav_item_dashboard");
+const fellow_interns_info = document.getElementById("info_per_nav_item_fellow_interns");
+const settings_info = document.getElementById("info_per_nav_item_settings");
+
+button_dashboard.onclick = function(){
+    dashboard_info.style.display = "flex";
+    fellow_interns_info.style.display = "none";
+    settings_info.style.display = "none";
+}
+button_interns.onclick = function(){
+    hide_menu();
+    dashboard_info.style.display = "none";
+    fellow_interns_info.style.display = "flex";
+    settings_info.style.display = "none";
+}
+button_settings.onclick = function(){
+    dashboard_info.style.display = "none";
+    fellow_interns_info.style.display = "none";
+    settings_info.style.display = "flex";
+}
