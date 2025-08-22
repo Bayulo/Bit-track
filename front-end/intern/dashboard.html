@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div id="back_blur" onclick="closeSupervisor(), closeProfile(), closeCalendar()"></div>
+    <div id="back_blur" onclick="closeSupervisor(), closeProfile(), closeCalendar(), closeTasks(), hideNewAnnouncements()"></div>
     <header>
         <div id="logo">Bit Track</div>
         <div id="profile_salutation">
@@ -72,6 +72,7 @@
                     <li id="button_interns"><a href="#">Fellow interns</a></li>
                     <li onclick="showSupervisor()" id="supervisor_select"><a href="#">Supervisor</a></li>
                     <li id="button_settings"><a href="#">Settings</a></li>
+                    <li><a href="#">Announcements</a></li>
                     <li><a href="#">Help</a></li>
                     <div class="pic">
                         <li><a href="#">Logout <img
@@ -107,8 +108,8 @@
         <div id="info_per_nav_item_dashboard">
             <div id="top_tasks">
                 <div id="log_book" onclick="showCalendar()"><div id="log_book_img"></div>Daily Logbook</div>
-                <div id="tasks"><div id="tasks_img"></div>Tasks</div>
-                <div id="announcement"><div id="announcements_img"></div>Announcement</div>
+                <div id="tasks" onclick="showTasks()"><div id="tasks_img"></div>Tasks</div>
+                <div id="announcement" onclick="showNewAnnouncements()"><div id="announcements_img"></div>New announcements</div>
             </div>
             <div id="log_book_follow_up">
                 <img onclick="closeCalendar()" src="/front-end/intern/assets/images/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" id="calendar_close">
@@ -132,6 +133,28 @@
                 NB: You can only fill for this current Day.<br>
                 This is also your daily attendance.
                 <a href="/front-end/intern/fill.html"><div id="fill">Fill</div></a>
+            </div>
+
+            <div id="tasks_view">
+                <img src="/front-end/intern/assets/images/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" onclick="closeTasks()">
+                <a href="/front-end/intern/new_tasks.html"><div id="new_task_button">New Tasks</div></a>
+                <a href="/front-end/intern/tasks_overview.html"><div id="overview_task_button">Task Overview</div></a>
+            </div>
+
+            <div id="new_announcements_pop">
+                <img src="/front-end/intern/assets/images/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" onclick="hideNewAnnouncements()">
+                <div id="message_holder">
+                    <div id="message_date">01/01/2001</div>
+                    <div id="message_info">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem velit sunt quibusdam laboriosam, illum similique.</div>
+                </div>
+                <div id="message_holder">
+                    <div id="message_date">01/01/2001</div>
+                    <div id="message_info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, eaque modi! Maiores, commodi. Maxime, iusto?</div>
+                </div>
+                <div id="message_holder">
+                    <div id="message_date">01/01/2001</div>
+                    <div id="message_info">Lorem ipsum dolor sit amet consectetur adipisicing elit. In vel reiciendis repudiandae temporibus. Illum, error!</div>
+                </div>
             </div>
 
             <div id="deadline">Your internship ends in <span>.....</span></div>
@@ -184,6 +207,9 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div id="info_per_nav_item_annoncements">
+
         </div>
     </main>
     <footer>

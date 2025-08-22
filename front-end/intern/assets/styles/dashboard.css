@@ -295,6 +295,7 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 #log_book_img{
     background-image: url(/front-end/intern/assets/images/log_book.jpg);
@@ -541,6 +542,96 @@ main{
     display: flex;
     width: fit-content;
     align-items: center;
+}
+
+#tasks_view{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    color: white;
+    background-color: #721A14;
+    position: absolute;
+    width: 30vw;
+    min-width: 300px;
+    height: 60vh;
+    max-height: 600px;
+    border-radius: 2rem;
+    margin-left: -10%;
+    margin-top: -2%;
+    gap: 3rem;
+}
+#new_task_button, #overview_task_button{
+    border: solid;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+#new_task_button:hover, #overview_task_button:hover{
+    background-color: #e1372b;
+    scale: 1.1;
+    transition: 0.3s;
+}
+#tasks_view img{
+    margin-bottom: 10%;
+    margin-top: -30%;
+    margin-left: 85%;
+    width: 2.5rem;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+#tasks_view img:hover{
+    background-color: #e1372b;
+}
+#tasks_view a{
+    color: white;
+    text-decoration: none;
+}
+
+#new_announcements_pop{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    color: white;
+    background-color: #721A14;
+    position: fixed;
+    width: 60vw;
+    min-width: 300px;
+    height: fit-content;
+    padding: 2rem;
+    max-height: 600px;
+    border-radius: 2rem;
+    margin-left: -10%;
+    margin-top: -2%;
+    gap: 3rem;
+}
+#message_holder{
+    border: solid;
+    color: white;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+#message_date{
+    text-align: end;
+}
+#new_announcements_pop img{
+    width: 2.5rem;
+    cursor: pointer;
+    border-radius: 1rem;
+    margin-left: auto;
+    margin-top: -2%;
+}
+#new_announcements_pop img:hover{
+    background-color: #e1372b;
+}
+#info_per_nav_item_annoncements{
+
+    
 }
 #deadline{
     height: fit-content;

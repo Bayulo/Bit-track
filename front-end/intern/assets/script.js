@@ -83,6 +83,38 @@ function closeCalendar(){
     popupBackground();
 }
 
+function showTasks(){
+    const tasks_view = document.getElementById("tasks_view");
+    tasks_view.style.display = "flex";
+    popup_is_open = true;
+    popupBackground();
+    hide_menu();
+}
+
+function closeTasks(){
+    popup_is_open = false;
+    const tasks_view = document.getElementById("tasks_view");
+    tasks_view.style.display = "none";
+    popupBackground();
+}
+
+function showNewAnnouncements(){
+    const new_announcements_pop = document.getElementById("new_announcements_pop");
+    new_announcements_pop.style.display = "flex";
+    popup_is_open = true;
+    popupBackground();
+    hide_menu();
+}
+
+function hideNewAnnouncements(){
+    popup_is_open = false;
+    const new_announcements_pop = document.getElementById("new_announcements_pop");
+    new_announcements_pop.style.display = "none";
+    popupBackground();
+}
+
+
+
 let popup_is_open = false;
 function popupBackground(){
     const background = document.getElementById("back_blur");
