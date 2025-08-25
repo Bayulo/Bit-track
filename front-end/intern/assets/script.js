@@ -211,24 +211,35 @@ document.addEventListener("DOMContentLoaded", function (){
 const button_dashboard = document.getElementById("button_dashboard");
 const button_interns = document.getElementById("button_interns");
 const button_settings = document.getElementById("button_settings");
+const button_announcements = document.getElementById("button_announcements");
 
 const dashboard_info = document.getElementById("info_per_nav_item_dashboard");
 const fellow_interns_info = document.getElementById("info_per_nav_item_fellow_interns");
 const settings_info = document.getElementById("info_per_nav_item_settings");
+const announcements_info = document.getElementById("info_per_nav_item_annoncements");
 
 button_dashboard.onclick = function(){
     dashboard_info.style.display = "flex";
     fellow_interns_info.style.display = "none";
     settings_info.style.display = "none";
+    announcements_info.style.display = "none";
 }
 button_interns.onclick = function(){
     hide_menu();
     dashboard_info.style.display = "none";
     fellow_interns_info.style.display = "flex";
     settings_info.style.display = "none";
+    announcements_info.style.display = "none";
 }
 button_settings.onclick = function(){
     dashboard_info.style.display = "none";
     fellow_interns_info.style.display = "none";
     settings_info.style.display = "flex";
+    announcements_info.style.display = "none";
+}
+button_announcements.onclick = function (){
+    dashboard_info.style.display = "none";
+    fellow_interns_info.style.display = "none";
+    settings_info.style.display = "none";
+    announcements_info.style.display = "flex";
 }

@@ -630,8 +630,13 @@ main{
     background-color: #e1372b;
 }
 #info_per_nav_item_annoncements{
-
-    
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 2% 5%;
+    height: 100vh;
+    min-height: auto;
+    gap: 10%;
 }
 #deadline{
     height: fit-content;
