@@ -597,9 +597,9 @@ main{
     border: 1px solid;
     color: white;
     background-color: #721A14;
-    position: fixed;
+    position: absolute;
     width: 60vw;
-    min-width: 300px;
+    min-width: 250px;
     height: fit-content;
     padding: 2rem;
     max-height: 600px;
@@ -722,6 +722,14 @@ footer{
         width: auto;
     }
 }
+@media screen and (max-width: 650px) {
+    #new_announcements_pop{
+        gap: 1rem;
+        max-height: 550px;
+        overflow: scroll;
+    }
+}
+
 @media screen and (max-width: 575px) {
     .interns_holder{
         height: 35%;
@@ -740,6 +748,17 @@ footer{
     }
     #edit_profile{
         width: 15vw;
+    }
+}
+@media screen and (max-width:500px) {
+    #message_holder{
+        border: solid;
+        color: white;
+        display: flex;
+        gap: 1rem;
+        padding: 1rem;
+        border-radius: 1rem;
+        flex-direction: column;
     }
 }
 
@@ -764,6 +783,9 @@ footer{
     }
     #edit_profile{
         width: 20vw;
+    }
+    #new_announcements_pop{
+        height: 430px;
     }
 }
 @media screen and (max-width: 350px) {
