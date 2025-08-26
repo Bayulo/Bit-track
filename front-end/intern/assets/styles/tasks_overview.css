@@ -1,0 +1,44 @@
+body{
+    background-color: rgb(255, 233, 233);
+}
+#container{
+    /* border: solid; */
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#graded_tasks_container{
+    border: 1px solid #721A14;
+    background-color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 10px 0px;
+}
+#graded_task_1{
+    border: 1px solid #721A14;
+    border-radius: 1rem;
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+}
+#graded_task_number{
+    border: solid;
+    padding: 0.5rem 0.8rem;
+    color: white;
+    background-color: #721A14;
+    border-radius: 50%;
+    height: fit-content;
+}
+#graded_dates{
+    display: flex;
+    gap: 2rem;
+}
+#submission_details{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}

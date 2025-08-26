@@ -475,7 +475,6 @@ main{
     padding: 2% 10%;
     height: 100vh;
     min-height: auto;
-    flex-wrap: wrap;
     gap: 25%;
 }
 #font_alter{
@@ -490,11 +489,12 @@ main{
 }
 #font_list{
     display: flex;
-    gap: 1.3rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3.5rem;
 }
 .fonts{
     display: flex;
-    width: 70%;
     align-items: center;
 }
 #font_toogle_1, #font_toogle_2, #font_toogle_3, #font_toogle_4, #font_toogle_5{
@@ -521,8 +521,8 @@ main{
 }
 #color_list{
     display: flex;
+    flex-wrap: wrap;
     gap: 3.5rem;
-    align-items: center;
     flex-direction: row;
 }
 #color_toogle_1, #color_toogle_2, #color_toogle_3, #color_toogle_4, #color_toogle_5{
@@ -698,6 +698,9 @@ footer{
     #supervisor_details{
         flex-direction: column;
     }
+    #info_per_nav_item_settings{
+        gap: 15%;
+    }
 }
 @media screen and (max-width: 600px) {
     #responsive_nav{
@@ -720,6 +723,13 @@ footer{
     #profile_salutation{
         justify-content: center;
         width: auto;
+    }
+}
+@media screen and (max-width: 656px) {
+    #info_per_nav_item_settings{
+        gap: 5%;
+        /* height: max-content; */
+        overflow: scroll;
     }
 }
 @media screen and (max-width: 650px) {
@@ -786,6 +796,9 @@ footer{
     }
     #new_announcements_pop{
         height: 430px;
+    }
+    #color_list, #font_list{
+        flex-direction: column;
     }
 }
 @media screen and (max-width: 350px) {

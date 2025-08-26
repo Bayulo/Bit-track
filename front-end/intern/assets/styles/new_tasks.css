@@ -7,6 +7,7 @@ body{
     flex-direction: column;
     gap: 3rem;
     padding: 3rem 0;
+    font-size: 1.2rem;
 }
 #page_heading{
     color: #721A14;
@@ -93,5 +94,8 @@ body{
 @media screen and (max-width: 400px) {
     .dates_wrapper_primary{
         margin-left: 0.5rem;
+    }
+    #new_tasks_container{
+        width: 85%;
     }
 }
