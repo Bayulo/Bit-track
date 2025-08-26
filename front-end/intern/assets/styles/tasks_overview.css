@@ -1,5 +1,6 @@
 body{
     background-color: rgb(255, 233, 233);
+    font-size: 1.1rem;
 }
 #container{
     /* border: solid; */
@@ -7,8 +8,9 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 3rem;
 }
-#graded_tasks_container{
+.tasks_container{
     border: 1px solid #721A14;
     background-color: white;
     padding: 2rem;
@@ -18,14 +20,14 @@ body{
     border-radius: 1rem;
     box-shadow: 0px 4px 10px 0px;
 }
-#graded_task_1{
+.specific_task_container{
     border: 1px solid #721A14;
     border-radius: 1rem;
     display: flex;
     gap: 2rem;
     padding: 1rem;
 }
-#graded_task_number{
+.task_number{
     border: solid;
     padding: 0.5rem 0.8rem;
     color: white;
@@ -33,12 +35,88 @@ body{
     border-radius: 50%;
     height: fit-content;
 }
-#graded_dates{
+.dates{
     display: flex;
-    gap: 2rem;
+    gap: 8rem;
 }
-#submission_details{
+.submission_details{
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+}
+.deadline{
+    color: red;
+}
+.summary_container{
+    border: 1px solid #721A14;
+    background-color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 10px 0px;
+}
+.charts{
+    display: flex;
+}
+.chart_wrapper{
+    display: flex;
+    flex-direction: column;
+    border: solid;
+    margin: 1rem;
+    height: 25vh;
+    align-items: center;
+}
+.chart_wrapper div{
+    border: solid;
+}
+.section_title{
+    font-size: x-large;
+    color: #721A14;
+}
+.section_title_secondary{
+    font-size: larger;
+}
+
+footer{
+    text-align: center;
+}
+@media screen and (max-width: 1033px) {
+    .dates{
+        gap: 4rem;
+    }
+}
+@media screen and (max-width: 820px) {
+    .dates{
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+@media screen and (max-width: 650px) {
+    .specific_task_container{
+        gap: 0.7rem;
+        flex-direction: column;
+    }
+    .task_number{
+        width: fit-content;
+    }
+}
+@media screen and (max-width: 600px) {
+    #container{
+        padding: 1.5rem;
+    }
+}
+@media screen and (max-width: 450px) {
+    .charts{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 400px) {
+    #container{
+        padding: 0.5rem;
+    }
+    .tasks_container{
+        padding: 1rem;
+    }
 }

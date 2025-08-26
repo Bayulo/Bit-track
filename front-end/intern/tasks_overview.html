@@ -1,61 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tasks_overview</title>
     <link href="/front-end/intern/assets/styles/tasks_overview.css" rel="stylesheet">
 </head>
+
 <body>
-    <div id="container">
-        <div id="graded_tasks_container">
-            <div id="graded_task_1">
-                <div id="graded_task_number">
-                    1
-                </div>
-                <div id="submission_details">
-                    <div id="graded_tasks_title">Task Title: <span>Lorem, ipsum dolor sit amet consectetur adipisicing.</span></div>
-                    <div id="graded_dates">
-                        <div>Date Assigned: <span id="date_assigned">Mon Jan 01 2025 </span><span id="time_assigned">10:00am</span></div>
-                        <div>Date Submitted: <span id="date_submitted">Mon Jan 02 2025 </span><span id="time_submitted">10:00am</span></div>
+    <header></header>
+    <main>
+        <div id="container">
+            <!-- undone tasks -->
+
+            <div class="tasks_container">
+                <div class="section_title">Undone Tasks</div>
+                <!-- Deadline not Exceeded -->
+                <div class="section_title_secondary">Deadline Not Exceeded</div>
+                <div class="specific_task_container">
+                    <div class="task_number">
+                        1
                     </div>
-                    <div id="graded_tasks_description">
-                        Description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi consequuntur laborum voluptates magni dolores amet est voluptatum accusantium in ratione.
+                    <div class="submission_details">
+                        <div class="graded_tasks_title">Task Title: <span id="graded_tasks_title_content_2">Lorem, ipsum
+                                dolor sit amet consectetur adipisicing.</span></div>
+                        <div class="dates">
+                            <div>Date Assigned: <span id="date_assigned_1">Mon Jan 01 2025 </span><span
+                                    id="time_assigned">10:00am</span></div>
+                            <div class="deadline">Assigned Deadline: <span id="assigned_deadline_1">Mon Jan 01 2025
+                                </span><span id="time_assigned">10:00am</span></div>
+                        </div>
+                        <div class="graded_tasks_description">
+                            Description: <span id="graded_tasks_description_content_1">Lorem ipsum dolor sit amet
+                                consectetur, adipisicing elit. Nisi consequuntur laborum voluptates magni dolores amet
+                                est voluptatum accusantium in ratione.</span>
+                        </div>
                     </div>
-                    <div>Submission Link/File: </div>
                 </div>
-                <div id="task_grade">
-                    Grade
+                <div class="specific_task_container">
+                    <div class="task_number">
+                        2
+                    </div>
+                    <div class="submission_details">
+                        <div class="graded_tasks_title">Task Title: <span id="graded_tasks_title_content_2">Lorem, ipsum
+                                dolor sit amet consectetur adipisicing.</span></div>
+                        <div class="dates">
+                            <div>Date Assigned: <span id="date_assigned_1">Mon Jan 01 2025 </span><span
+                                    id="time_assigned">10:00am</span></div>
+                            <div class="deadline">Assigned Deadline: <span id="assigned_deadline_1">Mon Jan 01 2025
+                                </span><span id="time_assigned">10:00am</span></div>
+                        </div>
+                        <div class="graded_tasks_description">
+                            Description: <span id="graded_tasks_description_content_1">Lorem ipsum dolor sit amet
+                                consectetur, adipisicing elit. Nisi consequuntur laborum voluptates magni dolores amet
+                                est voluptatum accusantium in ratione.</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Deadline Exceeded -->
+                <br>
+                <div class="section_title_secondary">Deadline Exceeded</div>
+                <div class="specific_task_container">
+                    <div class="task_number">
+                        1
+                    </div>
+                    <div class="submission_details">
+                        <div class="graded_tasks_title">Task Title: <span id="graded_tasks_title_content_2">Lorem, ipsum
+                                dolor sit amet consectetur adipisicing.</span></div>
+                        <div class="dates">
+                            <div>Date Assigned: <span id="date_assigned_1">Mon Jan 01 2025 </span><span
+                                    id="time_assigned">10:00am</span></div>
+                            <div class="deadline">Assigned Deadline: <span id="assigned_deadline_1">Mon Jan 01 2025
+                                </span><span id="time_assigned">10:00am</span></div>
+                        </div>
+                        <div class="graded_tasks_description">
+                            Description: <span id="graded_tasks_description_content_1">Lorem ipsum dolor sit amet
+                                consectetur, adipisicing elit. Nisi consequuntur laborum voluptates magni dolores amet
+                                est voluptatum accusantium in ratione.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="specific_task_container">
+                    <div class="task_number">
+                        2
+                    </div>
+                    <div class="submission_details">
+                        <div class="graded_tasks_title">Task Title: <span id="graded_tasks_title_content_2">Lorem, ipsum
+                                dolor sit amet consectetur adipisicing.</span></div>
+                        <div class="dates">
+                            <div>Date Assigned: <span id="date_assigned_1">Mon Jan 01 2025 </span><span
+                                    id="time_assigned">10:00am</span></div>
+                            <div class="deadline">Assigned Deadline: <span id="assigned_deadline_1">Mon Jan 01 2025
+                                </span><span id="time_assigned">10:00am</span></div>
+                        </div>
+                        <div class="graded_tasks_description">
+                            Description: <span id="graded_tasks_description_content_1">Lorem ipsum dolor sit amet
+                                consectetur, adipisicing elit. Nisi consequuntur laborum voluptates magni dolores amet
+                                est voluptatum accusantium in ratione.</span>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div> <!-- Submitted Tasks -->
+
+            <div class="tasks_container">
+                <div class="section_title">Submitted Tasks</div>
+                <div class="specific_task_container">
+                    <div class="task_number">
+                        1
+                    </div>
+                    <div class="submission_details">
+                        <div class="graded_tasks_title">Task Title: <span id="graded_tasks_title_content_2">Lorem, ipsum
+                                dolor sit amet consectetur adipisicing.</span></div>
+                        <div class="dates">
+                            <div>Date Assigned: <span id="date_assigned_1">Mon Jan 01 2025 </span><span
+                                    id="time_assigned">10:00am</span></div>
+                            <div>Date Submitted: <span id="date_submitted_1">Mon Jan 02 2025 </span><span
+                                    id="time_submitted">10:00am</span></div>
+                            <div class="deadline">Assigned Deadline: <span id="assigned_deadline_1">Mon Jan 01 2025
+                                </span><span id="time_assigned">10:00am</span></div>
+                        </div>
+                        <div class="graded_tasks_description">
+                            Description: <span id="graded_tasks_description_content_1">Lorem ipsum dolor sit amet
+                                consectetur, adipisicing elit. Nisi consequuntur laborum voluptates magni dolores amet
+                                est voluptatum accusantium in ratione.</span>
+                        </div>
+                        <div>Submission Link/File: </div>
+                    </div>
+                </div>
+                <div class="specific_task_container">
+                    <div class="task_number">
+                        2
+                    </div>
+                    <div class="submission_details">
+                        <div class="graded_tasks_title">Task Title: <span id="graded_tasks_title_content_2">Lorem, ipsum
+                                dolor sit amet consectetur adipisicing.</span></div>
+                        <div class="dates">
+                            <div>Date Assigned: <span id="date_assigned_1">Mon Jan 01 2025 </span><span
+                                    id="time_assigned">10:00am</span></div>
+                            <div>Date Submitted: <span id="date_submitted_1">Mon Jan 02 2025 </span><span
+                                    id="time_submitted">10:00am</span></div>
+                            <div class="deadline">Assigned Deadline: <span id="assigned_deadline_1">Mon Jan 01 2025
+                                </span><span id="time_assigned">10:00am</span></div>
+                        </div>
+                        <div class="graded_tasks_description">
+                            Description: <span id="graded_tasks_description_content_1">Lorem ipsum dolor sit amet
+                                consectetur, adipisicing elit. Nisi consequuntur laborum voluptates magni dolores amet
+                                est voluptatum accusantium in ratione.</span>
+                        </div>
+                        <div>Submission Link/File: </div>
+                    </div>
                 </div>
             </div>
-            
-            <div id="graded_task_1">
-                <div id="graded_task_number">
-                    2
-                </div>
-                <div id="submission_details">
-                    <div id="graded_tasks_title">Task Title: <span>Lorem, ipsum dolor sit amet consectetur adipisicing.</span></div>
-                    <div id="graded_dates">
-                        <div>Date Assigned: <span id="date_assigned">Mon Jan 01 2025 </span><span id="time_assigned">10:00am</span></div>
-                        <div>Date Submitted: <span id="date_submitted">Mon Jan 02 2025 </span><span id="time_submitted">10:00am</span></div>
+            <!-- Graded Tasks -->
+
+            <div class="tasks_container">
+                <div class="section_title">Graded Tasks</div>
+                <div class="specific_task_container">
+                    <div class="task_number">
+                        1
                     </div>
-                    <div id="graded_tasks_description">
-                        Description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi consequuntur laborum voluptates magni dolores amet est voluptatum accusantium in ratione.
+                    <div class="submission_details">
+                        <div class="graded_tasks_title">Task Title: <span id="graded_tasks_title_content_2">Lorem, ipsum
+                                dolor sit amet consectetur adipisicing.</span></div>
+                        <div class="dates">
+                            <div>Date Assigned: <span id="date_assigned_1">Mon Jan 01 2025 </span><span
+                                    id="time_assigned">10:00am</span></div>
+                            <div>Date Submitted: <span id="date_submitted_1">Mon Jan 02 2025 </span><span
+                                    id="time_submitted">10:00am</span></div>
+                            <div class="deadline">Assigned Deadline: <span id="assigned_deadline_1">Mon Jan 01 2025
+                                </span><span id="time_assigned">10:00am</span></div>
+                        </div>
+                        <div class="graded_tasks_description">
+                            Description: <span id="graded_tasks_description_content_1">Lorem ipsum dolor sit amet
+                                consectetur, adipisicing elit. Nisi consequuntur laborum voluptates magni dolores amet
+                                est voluptatum accusantium in ratione.</span>
+                        </div>
+                        <div>Submission Link/File: </div>
                     </div>
-                    <div>Submission Link/File: </div>
+                    <div class="task_grade">
+                        <span id="task_grade_1">Grade</span>
+                    </div>
                 </div>
-                <div id="task_grade">
-                    Grade
+
+                <div class="specific_task_container">
+                    <div class="task_number">
+                        2
+                    </div>
+                    <div class="submission_details">
+                        <div class="graded_tasks_title">Task Title: <span id="graded_tasks_title_content_2">Lorem, ipsum
+                                dolor sit amet consectetur adipisicing.</span></div>
+                        <div class="dates">
+                            <div>Date Assigned: <span id="date_assigned_2">Mon Jan 01 2025 </span><span
+                                    id="time_assigned">10:00am</span></div>
+                            <div>Date Submitted: <span id="date_submitted_2">Mon Jan 02 2025 </span><span
+                                    id="time_submitted">10:00am</span></div>
+                            <div class="deadline">Assigned Deadline: <span id="assigned_deadline_2">Mon Jan 01 2025
+                                </span><span id="time_assigned">10:00am</span></div>
+                        </div>
+                        <div class="graded_tasks_description">
+                            Description: <span id="graded_tasks_description_content_2">Lorem ipsum dolor sit amet
+                                consectetur, adipisicing elit. Nisi consequuntur laborum voluptates magni dolores amet
+                                est voluptatum accusantium in ratione.</span>
+                        </div>
+                        <div>Submission Link/File: </div>
+                    </div>
+                    <div class="task_grade">
+                        <span id="task_grade_2">Grade</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Peformance Summary -->
+
+            <div class="summary_container">
+                <div class="section_title">Summary</div>
+                <div class="charts">
+                    <div class="chart_wrapper"> <!--Performed Tasks Summary-->
+                        <!-- %grades (A, B, C etc.) in pie chart format -->
+                        <div id="chart_1">Chart 1</div>
+                        <div>Performed Tasks Summary</div>
+                    </div>
+                    <div class="chart_wrapper">
+                        <!-- %tasks submitted and %tasks undone %tasks graded in pie chart format -->
+                        <div id="chart_2">Chart 2</div>
+                        <div>Overall Tasks Summary</div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div id="performed_tasks_container">Performed Tasks</div>
-        <div id="undone_tasks_container">Undone Tasks</div>
-        <div id="summary_container">Summary
-            <div>Performed Tasks Summary</div>
-            <div>Overall Tasks Summary</div>
-        </div>
-    </div>
-    
+    </main>
+    <footer>&copy; Bits Valley 2025</footer>
 </body>
+
 </html>
