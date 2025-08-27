@@ -1,0 +1,92 @@
+body{
+    background-color: rgb(253, 221, 221);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 1.2rem;
+    padding: 0 2rem;
+}
+#container{
+    border: 1px solid #721A14;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0px 2px 7px 0px;
+    flex-direction: column;
+    gap: 2rem;
+}
+#issue_wrapper{
+    display: flex;
+    gap: 3.8rem;
+    align-items: center;
+}
+#issue{
+    height: 1.7rem;
+    border-radius: 0.5rem;
+    width: 90%;
+    font-size: large;
+}
+#description_wrapper{
+    display: flex;
+    gap: 1rem;
+}
+#description{
+    width: 40rem;
+    height: 15rem;
+    border-radius: 0.5rem;
+    font-size: large;
+}
+label{
+    cursor: pointer;
+}
+#button_wrapper{
+    display: flex;
+    justify-content: center;
+}
+#button_wrapper button{
+    height: 2.5rem;
+    padding: 0 1rem;
+    background-color: #721A14;
+    cursor: pointer;
+    color: white;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+#button_wrapper button:hover{
+    scale: 1.1;
+    background-color: #e1372b;
+    transition: 0.3s;
+}
+@media screen and (max-width: 900px) {
+    #container{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 500px) {
+    #description_wrapper{
+        flex-direction: column;
+    }
+    #description{
+        width: 100%;
+    }
+    #issue_wrapper{
+        flex-direction: column;
+        align-items: start;
+        gap: 0.5rem;
+    }
+    #issue{
+        width: 100%;
+    }
+    body{
+        padding: 0 0.3rem;
+    }
+}
+@media screen and (max-width: 425px) {
+    #container{
+        padding: 1.3rem;
+    }
+}
