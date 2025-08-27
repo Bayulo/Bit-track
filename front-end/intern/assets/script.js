@@ -8,7 +8,7 @@ function show_menu(){
 
     icon.setAttribute("src", "/front-end/intern/assets/images/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png");
     items.forEach(item => {item.style.display = "block"; item.style.height = "6vh"});
-    responsive_nav.style.width = "40vw";
+    responsive_nav.style.width = "48vw";
     responsive_nav.style.position = "absolute";
 }
 
@@ -19,7 +19,7 @@ function hide_menu(){
 
     icon.setAttribute("src", "/front-end/intern/assets/images/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png");
     items.forEach(item => item.style.display = "none");
-    responsive_nav.style.width = "12vw";
+    responsive_nav.style.width = "15vw";
     responsive_nav.style.position = "static";
     // popup_is_open = false;
 }
@@ -208,38 +208,37 @@ document.addEventListener("DOMContentLoaded", function (){
     show_month(current_date);
 });
 
-const button_dashboard = document.getElementById("button_dashboard");
-const button_interns = document.getElementById("button_interns");
-const button_settings = document.getElementById("button_settings");
-const button_announcements = document.getElementById("button_announcements");
+const button_dashboard = document.querySelectorAll(".button_dashboard");
+const button_interns = document.querySelectorAll(".button_interns");
+const button_settings = document.querySelectorAll(".button_settings");
+const button_announcements = document.querySelectorAll(".button_announcements");
 
 const dashboard_info = document.getElementById("info_per_nav_item_dashboard");
 const fellow_interns_info = document.getElementById("info_per_nav_item_fellow_interns");
 const settings_info = document.getElementById("info_per_nav_item_settings");
 const announcements_info = document.getElementById("info_per_nav_item_annoncements");
 
-button_dashboard.onclick = function(){
+button_dashboard.forEach(item => item.addEventListener("click", function(){
     dashboard_info.style.display = "flex";
     fellow_interns_info.style.display = "none";
     settings_info.style.display = "none";
     announcements_info.style.display = "none";
-}
-button_interns.onclick = function(){
-    hide_menu();
+}));
+button_interns.forEach(item => item.addEventListener("click", function(){
     dashboard_info.style.display = "none";
     fellow_interns_info.style.display = "flex";
     settings_info.style.display = "none";
     announcements_info.style.display = "none";
-}
-button_settings.onclick = function(){
+}));
+button_settings.forEach(item => item.addEventListener("click", function(){
     dashboard_info.style.display = "none";
     fellow_interns_info.style.display = "none";
     settings_info.style.display = "flex";
     announcements_info.style.display = "none";
-}
-button_announcements.onclick = function (){
+}));
+button_announcements.forEach(item => item.addEventListener("click", function(){
     dashboard_info.style.display = "none";
     fellow_interns_info.style.display = "none";
     settings_info.style.display = "none";
     announcements_info.style.display = "flex";
-}
+}));
