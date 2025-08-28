@@ -1,4 +1,7 @@
 body{
+    margin: 0px;
+}
+#overall_container{
     background-color: rgb(255, 233, 233);
     display: flex;
     justify-content: center;
@@ -67,6 +70,51 @@ body{
     scale: 1.1;
     transition: 0.3s;
     background-color: #c02d22;
+}
+#dark_background{
+    border: solid;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(59, 12, 8, 0.8);
+    margin: 0px;
+    z-index: 999;
+    display: none;
+}
+#perform_popup{
+    border: solid;
+    display: none;
+    z-index: 9999;
+    color: white;
+    background-color: #721A14;
+    position: fixed;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin: 15rem 15rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+#submission_wrapper_1{
+    display: flex;
+    gap: 2rem;
+}
+#submission_wrapper_2{
+    display: flex;
+    gap: 2rem;
+    height: 15rem;
+    width: 50rem;
+}
+#task_name{
+    margin-left: 15%;
+    width: 100%;
+    border-radius: 0.5rem;
+}
+#task_description{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    max-height: inherit;
 }
 @media screen and (max-width: 850px) {
     .dates_wrapper_primary{

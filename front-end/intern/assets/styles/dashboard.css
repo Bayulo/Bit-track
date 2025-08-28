@@ -153,13 +153,15 @@ body{
     display: none;
     flex-direction: column;
     align-items: center;
-    gap: 5vh;
+    padding: 1rem;
+    gap: 5vw;
     border: solid;
     color: white;
     background-color: #721A14;
     position: absolute;
     margin-left: 20%;
     width: fit-content;
+    min-width: 250px;
     height: 70vh;
     border-radius: 3vh;
 }
@@ -279,9 +281,8 @@ main{
     padding: 2% 10%;
     height: 100vh;
     min-height: auto;
-    flex-wrap: wrap;
     gap: 25%;
-    overflow-y: scroll ;
+    overflow: scroll ;
 }
 #top_tasks{
     display: flex;
@@ -408,22 +409,26 @@ main{
     height: 40vh;
 }
 #days div{
-    cursor: pointer;
     transition: background-color 0.3s;
 }
 #days div:hover{
     color: #e1372b;
     background-color:#ffdddb;
 }
-#days .today{
-    background-color: #e1372b;
-    color: #ffdddb;
-}
 #days .fade{
     color: #9c9a9a;
 }
 #days .internship_span{
     background-color: green;
+    cursor: pointer;
+}
+#days .today{
+    background-color: #e1372b;
+    color: #ffdddb;
+}
+#days .internship_span:hover{
+    transition: 0.3s;
+    scale: 1.2;
 }
 #log_book_follow_up a{
     color: white;
@@ -819,9 +824,9 @@ footer{
     #supervisor_label{
         font-size: 3.5vh;
     }
-    #supervisor_info{
+    /* #supervisor_info{
         min-width: 70vw;
-    }
+    } */
     #profile_details_1 img{
         height: 15vh;
         width: 15vh;

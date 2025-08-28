@@ -135,8 +135,8 @@ function popupBackground(){
 }
 
 //Calendar
-const internship_start = new Date(2025, 7, 1) //That is; 2025 August 1st (to be amended)
-const internship_stop = new Date(2025, 9, 31) //That is;  2025 September 30th (to be amended)
+const internship_start = new Date(2025, 7, 1); //That is; 2025 August 1st (to be amended)
+const internship_stop = new Date(2025, 8, 30); //That is;  2025 September 30th (to be amended)
 const month_year = document.getElementById("month_year");
 const days_container = document.getElementById("days");
 const next_month_button = document.getElementById("next");
@@ -145,6 +145,16 @@ const prev_month_button = document.getElementById("prev");
 
 let current_date = new Date();
 let today = new Date();
+
+function show_login_for_specific_date(){
+    const attendance = document.querySelectorAll(".internship_span");
+    attendance.forEach(item => {
+        item.addEventListener('click', function(){
+            console.log("you can view attendace for today: "+ item.dataset.id );
+        });
+    });
+}
+
 
 document.addEventListener("DOMContentLoaded", function (){
     function show_month(date){
@@ -159,7 +169,7 @@ document.addEventListener("DOMContentLoaded", function (){
         
         //previous month's dates
         const prev_Month_last_day = new Date(year, month, 0).getDate();
-        for(let i = first_day; i > 1; i--){
+        for(let i = first_day-1; i >= 0; i--){
             const day_div = document.createElement("div");
             day_div.textContent = prev_Month_last_day - i + 1;
             day_div.classList.add("fade");
@@ -169,14 +179,13 @@ document.addEventListener("DOMContentLoaded", function (){
         //current month's dates
         for(let i = 1; i <= last_day; i++){
             const day_div = document.createElement("div");
+            const this_date = new Date(year, month, i);
+            day_div.setAttribute("data-id", `${[i,months[month],year]}`);
             day_div.textContent = `${i}`;
             //indicate internship span
-            if (i >= internship_start.getDate() && i <= internship_stop.getDate() && month >= internship_start.getMonth() && month <= internship_stop.getMonth() && year >= internship_start.getFullYear() && year <= internship_stop.getFullYear()){
+            if (this_date >= internship_start && this_date <= internship_stop){
                 day_div.classList.add("internship_span");
-                const attendance = document.getElementsByClassName("internship_span");
-                attendance.onclick = function show_filled_attendance(){
-                    //pop filled info
-                };
+                show_login_for_specific_date();
             }
             //indicate today
             if (i === today.getDate() && month === today.getMonth() && year === today.getFullYear()){
@@ -187,7 +196,7 @@ document.addEventListener("DOMContentLoaded", function (){
         }
         //next month's dates
         const next_month_start_day = 7 - new Date(year, month + 1, 0).getDay()-1;
-        for(let i = 1; i <= next_month_start_day+1; i++){
+        for(let i = 1; i <= next_month_start_day; i++){
             const day_div = document.createElement("div");
             day_div.textContent = i;
             day_div.classList.add("fade");
