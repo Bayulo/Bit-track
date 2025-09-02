@@ -1,5 +1,10 @@
 body{
     margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 233, 233);
 }
 #overall_container{
     background-color: rgb(255, 233, 233);
@@ -72,12 +77,10 @@ body{
     background-color: #c02d22;
 }
 #dark_background{
-    border: solid;
     position: fixed;
     width: 100vw;
-    height: 100vh;
+    height: 116vh;
     background-color: rgba(59, 12, 8, 0.8);
-    margin: 0px;
     z-index: 999;
     display: none;
 }
@@ -86,14 +89,27 @@ body{
     display: none;
     z-index: 9999;
     color: white;
-    background-color: #721A14;
+    background-color:#721A14;
     position: fixed;
     padding: 2rem;
     border-radius: 1rem;
-    margin: 15rem 15rem;
-    display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    width: 60%;
+    max-width: 800px;
+    margin-top: -10%;
+}
+#close_button_wrapper{
+    margin-left: auto;
+    scale: 1.2;
+    border-radius: 0.5rem;
+    margin-top: -1%;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+#close_button_wrapper:hover{
+    background-color: #c02d22;
+    transition: 0.3s;
 }
 #submission_wrapper_1{
     display: flex;
@@ -103,10 +119,9 @@ body{
     display: flex;
     gap: 2rem;
     height: 15rem;
-    width: 50rem;
 }
 #task_name{
-    margin-left: 15%;
+    margin-left: 7rem;
     width: 100%;
     border-radius: 0.5rem;
 }
@@ -116,9 +131,22 @@ body{
     border-radius: 0.5rem;
     max-height: inherit;
 }
+#task_submit_button{
+    border: 0.5px solid white;
+}
 @media screen and (max-width: 850px) {
     .dates_wrapper_primary{
         gap: 10vw;
+    }
+}
+@media screen and (max-width: 800px) {
+    #submission_wrapper_1, #submission_wrapper_2{
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    #task_name{
+        margin-left: 0%;
+        height: 2rem;
     }
 }
 @media screen and (max-width: 600px) {
@@ -145,5 +173,9 @@ body{
     }
     #new_tasks_container{
         width: 85%;
+    }
+    #perform_popup{
+        width: fit-content;
+        padding: 1.5rem;
     }
 }

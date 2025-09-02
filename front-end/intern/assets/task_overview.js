@@ -1,9 +1,9 @@
+const perform_task_button = document.querySelectorAll(".perform_task_button");
 const close_perform_window = document.getElementById("close_button_wrapper");
-const perform_button = document.querySelectorAll(".perform_button");
 const perform_popup = document.getElementById("perform_popup");
 const dark_background = document.getElementById("dark_background");
 
-perform_button.forEach(item => {
+perform_task_button.forEach(item => {
     item.onclick = function(){
         dark_background.style.display = "block";
         perform_popup.style.display = "flex";

@@ -3,58 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="assets/styles/dashboard.css" rel="stylesheet">
+    <title>dashboard_sup</title>
+    <link href="/front-end/Supervisor/assets/styles/dashboard.css" rel="stylesheet">
 </head>
 <body>
+    <div id="back_blur"></div>
     <header>
-        <div id="logo">
-            Bit Track
-        </div>
-        <div id="profile_salutation">
-            <div id="profile_button">
-                Profile
+        <!-- logo -->
+        <div id="logo">Bit Track</div>
+
+        <!-- profile and salutation -->
+        <div id="profile_and_salutation_wrapper">
+            <div id="profile">
+                <div id="edit_pencil"></div>
             </div>
-            <div id="salutation">
-                Hi <span>....</span>.
-            </div>
+            <div id="salutation">Greetings Sir <span>....</span></div>
         </div>
     </header>
+
     <main>
-        <nav>
-            <div id="side_nav_bar">
-                <ul>
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href="#">Fellow interns</a></li>
-                    <li><a href="#">Supervisor</a></li>
-                    <li><a href="#">Settings</a></li>
-                    <li><a href="#">Logout</a></li>
-                    <li><a href="#">Help</a></li>
-                </ul>
-            </div>
-            <div id="responsive_nav">
-                <ul>
-                    <li onclick=showNavbar()><a href="#"><img id="open_close_nav" src="/front-end/Supervisor/assets/images/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"></a></li>
-                    <li class="view_on_mobile"><a href="#">Dashboard</a></li>
-                    <li class="view_on_mobile"><a href="#">Fellow interns</a></li>
-                    <li class="view_on_mobile"><a href="#">Supervisor</a></li>
-                    <li class="view_on_mobile"><a href="#">Settings</a></li>
-                    <li class="view_on_mobile"><a href="#">Logout</a></li>
-                    <li class="view_on_mobile"><a href="#">Help</a></li>
-                </ul>
-            </div>
-        </nav>
+
+        <!--pop ups-->
+
+        <!-- <div></div>
+        <div></div>
+        <div></div>
+        <div></div> -->
+
+        <!--Side navigation bar-->
+        <div id="side_nav">
+            <div class="nav_options nav_options_dashboard">Dashboard</div>
+            <div class="nav_options nav_options_intern_details">Intern Details</div>
+            <div class="nav_options nav_options_announcements">Announcements</div>
+            <div class="nav_options nav_options_personal_summary">Personal Summary</div>
+            <div class="nav_options nav_options_settings">Settings</div>
+            <a class="nav_options nav_options_help" href="#"><div>Help</div></a>
+            <div class="nav_options nav_options_logout">Logout</div>
+        </div>
+        
+        <!--hidden navigation bar, visible only on mobile-->
+        <div id="responsive_nav">
+            <div id="menu_button"><img id="icon" src="/front-end/Supervisor/assets/images/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"></div>
+            <div class="nav_options nav_options_dashboard show_on_mobile">Dashboard</div>
+            <div class="nav_options nav_options_intern_details show_on_mobile">Intern Details</div>
+            <div class="nav_options nav_options_announcements show_on_mobile">Announcements</div>
+            <div class="nav_options nav_options_personal_summary show_on_mobile">Personal Summary</div>
+            <div class="nav_options nav_options_settings show_on_mobile">Settings</div>
+            <a class="nav_options nav_options_help show_on_mobile" href="#"><div>Help</div></a>
+            <div class="nav_options nav_options_logout show_on_mobile">Logout</div>
+        </div>
+
+        <!--Navigation options displays-->
         <div id="info_per_nav_item">
-            <div id="top_tasks">
-                <div id="log_book">Daily Logbook</div>
-                <div id="tasks">Tasks</div>
+
+            <!-- Dashboard display -->
+            <div id="nav_option_dashboard_display">
+                <div id="dashboard_display_wrapper">   
+                    <div class="container">
+                        <div class="container_picture"></div>
+                        <div class="container_name">Create Task</div>
+                    </div>
+                    <div class="container">
+                        <div class="container_picture"></div>
+                        <div class="container_name">View Submitted Tasks</div>
+                    </div>
+                    <div class="container">
+                        <div class="container_picture"></div>
+                        <div class="container_name">Assigned Interns</div>
+                    </div>
+                    <div class="container">
+                        <div class="container_picture"></div>
+                        <div class="container_name">Announcements</div>
+                    </div>
+                </div>
             </div>
-            <div id="deadline">Your internship ends in <span>.....</span></div>
+
+            <!-- intern details display -->
+            <div id="nav_option_intern_details_display">intern details display</div>
+
+            <!-- announcements display -->
+            <div id="nav_option_announcements_display">announcements display</div>
+
+            <!-- settings display -->
+            <div id="nav_option_settings_display">Settings display</div>
+
+            <!-- personal summary display -->
+            <div id="nav_option_personal_summary_display">Personal Summary display</div>
         </div>
     </main>
+
     <footer>
-        &copy; Bits Valley 2025
+        &copy; Bits Valley 2025.
     </footer>
-    <script src="assets/script.js"></script>
+    <script src="/front-end/Supervisor/assets/script.js"></script>
 </body>
 </html>
