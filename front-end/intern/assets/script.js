@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", function (){
         
         //previous month's dates
         const prev_Month_last_day = new Date(year, month, 0).getDate();
-        for(let i = first_day-1; i >= 0; i--){
+        for(let i = first_day-1; i > 0; i--){
             const day_div = document.createElement("div");
             day_div.textContent = prev_Month_last_day - i + 1;
             day_div.classList.add("fade");

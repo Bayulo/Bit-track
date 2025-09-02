@@ -119,4 +119,36 @@ function hide_back_blur(){
 }
 back_blur.onclick = function(){
     hide_menu();
+    hide_create_task_pop();
+}
+
+//create task pop up button functions 
+
+//open
+const create_task_dash = document.getElementById("create_task_dash");
+create_task_dash.onclick = function(){
+    const create_task_pop = document.getElementById("create_task_pop");
+    show_back_blur();
+    create_task_pop.style.display = "flex";
+}
+
+//add resources
+let count = 1;
+const add_resource_button = document.getElementById("add_resource_button");
+add_resource_button.onclick = function(){
+    count++;
+    if(count < 6){ //ensure max resources == 5
+        let resources_holder = document.getElementById("task_resource_sub_wrapper");
+        resources_holder.innerHTML+= `<input type="text" id="task_resource">`;
+    }
+}
+//close
+const create_task_pop_close = document.getElementById("create_task_pop_close");
+create_task_pop_close.onclick = function(){
+    hide_create_task_pop();
+    hide_back_blur();
+}
+function hide_create_task_pop(){
+    const create_task_pop = document.getElementById("create_task_pop");
+    create_task_pop.style.display = "none";
 }

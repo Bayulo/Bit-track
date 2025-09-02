@@ -29,6 +29,27 @@
         <div></div>
         <div></div>
         <div></div> -->
+        <div id="create_task_pop">
+            <img src="/front-end/Supervisor/assets/images/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" id="create_task_pop_close" alt="close button" width="35px" height="36px">
+            <div id="task_title_wrapper">
+                <label for="task_title">Title: </label><input type="text" id="task_title">
+            </div>
+            <div id="task_description_wrapper">
+                <label for="task_description">Description: </label><textarea id="task_description"></textarea>
+            </div>
+            <div id="task_resource_wrapper">
+                <label for="task_resource">Resources: </label>
+                <div id="task_resource_sub_wrapper">
+                    <input type="text" id="task_resource">
+                </div>
+                <div id="task_resource_button_wrapper">
+                    <button id="add_resource_button" title="You can create a maximum of 5 resrouces">Add Resource</button>
+                </div>
+            </div>
+            <div id="create_task_button_wrapper">
+                <button id="create_task_button">Create Task</button>
+            </div>
+        </div>
 
         <!--Side navigation bar-->
         <div id="side_nav">
@@ -59,7 +80,7 @@
             <!-- Dashboard display -->
             <div id="nav_option_dashboard_display">
                 <div id="dashboard_display_wrapper">   
-                    <div class="container">
+                    <div class="container" id="create_task_dash">
                         <div class="container_picture"></div>
                         <div class="container_name">Create Task</div>
                     </div>
