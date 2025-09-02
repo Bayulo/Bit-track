@@ -124,6 +124,7 @@ function hide_back_blur(){
 back_blur.onclick = function(){
     hide_menu();
     hide_create_task_pop();
+    hide_profile_pop();
 }
 
 //create task pop up button functions 
@@ -157,4 +158,23 @@ create_task_pop_close.onclick = function(){
 }
 function hide_create_task_pop(){
     create_task_pop.style.display = "none";
+}
+
+// profile view pop up functions
+//open
+const profile_button = document.getElementById("profile");
+const profile_view_pop = document.getElementById("profile_view_pop");
+profile_button.onclick = function(){
+    profile_view_pop.style.display = "flex";
+    show_back_blur();
+}
+
+//close
+const profile_view_pop_close = document.getElementById("profile_view_pop_close");
+profile_view_pop_close.onclick = function(){
+    hide_profile_pop();
+    hide_back_blur();
+}
+function hide_profile_pop(){
+    profile_view_pop.style.display = "none";
 }

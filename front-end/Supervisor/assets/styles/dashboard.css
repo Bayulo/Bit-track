@@ -71,7 +71,10 @@ main{
     height: 85vh;
     justify-content: center;
 }
+
 /* pop ups */
+
+/* create task pop up */
 #create_task_pop{
     border: solid;
     position: absolute;
@@ -98,6 +101,7 @@ main{
 }
 #create_task_pop_close:hover{
     background-color: #e1372b;
+    cursor: pointer;
 }
 #task_title_wrapper{
     display: flex;
@@ -172,6 +176,62 @@ main{
     scale: 1.1;
     cursor: pointer;
     transition: 0.3s;
+}
+
+/* profile view pop */
+#profile_view_pop{
+    border: solid;
+    position: absolute;
+    z-index: 9999;
+    margin-top: -3rem;
+    background-color: #721A14;
+    color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: none;
+    flex-direction: column;
+    width: 35vw;
+    height: fit-content;
+    min-width: 240px;
+    align-items: center;
+    gap: 1rem;
+}
+#profile_view_pop_close{
+    margin-left: auto;
+    border-radius: 0.5rem;
+    margin-top: -25px;
+    padding: 0.5rem;
+    position: relative;
+    left: 25px;
+}
+#profile_view_pop_close:hover{
+    background-color: #e1372b;
+    cursor: pointer;
+}
+#profile_view_pop_pic{
+    border: solid;
+    border-radius: 50%;
+}
+.supervisor_details{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.details_wrapper{
+    display: flex;
+    gap: 1rem;
+}
+#edit_profile{
+    border: solid;
+    width: 5rem;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+#edit_profile:hover{
+    background-color: #e1372b;
+    transition: 0.3s;
+    scale: 1.1;
 }
 
 /* continuation*/
