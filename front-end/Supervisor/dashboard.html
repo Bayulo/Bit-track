@@ -27,30 +27,32 @@
 
         <!-- create task pop up -->
         <div id="create_task_pop">
-            <img src="/front-end/Supervisor/assets/images/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" id="create_task_pop_close" alt="close button" width="35px" height="36px">
-            <div id="task_title_wrapper">
-                <label for="task_title">Title: </label><input type="text" id="task_title">
-            </div>
-            <div id="task_description_wrapper">
-                <label for="task_description">Description: </label><textarea id="task_description"></textarea>
-            </div>
-            <div id="task_resource_wrapper">
-                <label for="task_resource">Resources: </label>
-                <div id="task_resource_sub_wrapper">
-                    <input type="text" id="task_resource">
+            <img src="/front-end/Supervisor/assets/images/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" id="create_task_pop_close" class="pop_close" alt="close button" width="35px" height="36px">
+            <div class="all_task_details_wrapper">
+                <div id="task_title_wrapper">
+                    <label for="task_title">Title: </label><input type="text" id="task_title">
                 </div>
-                <div id="task_resource_button_wrapper">
-                    <button id="add_resource_button" title="You can create a maximum of 5 resrouces">Add Resource</button>
+                <div id="task_description_wrapper">
+                    <label for="task_description">Description: </label><textarea id="task_description"></textarea>
                 </div>
-            </div>
-            <div id="create_task_button_wrapper">
-                <button id="create_task_button">Create Task</button>
+                <div id="task_resource_wrapper">
+                    <label for="task_resource">Resources: </label>
+                    <div id="task_resource_sub_wrapper">
+                        <input type="text" id="task_resource">
+                    </div>
+                    <div id="task_resource_button_wrapper">
+                        <button id="add_resource_button" title="You can create a maximum of 5 resrouces">Add Resource</button>
+                    </div>
+                </div>
+                <div id="create_task_button_wrapper">
+                    <button id="create_task_button">Create Task</button>
+                </div>
             </div>
         </div>
 
         <!-- profile view pop up -->
         <div id="profile_view_pop">
-            <img src="/front-end/Supervisor/assets/images/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" id="profile_view_pop_close" alt="close_pic" width="30px" alt="30px">
+            <img src="/front-end/Supervisor/assets/images/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" id="profile_view_pop_close" class="pop_close" alt="close_pic" width="30px" alt="30px">
             <img src="/front-end/Supervisor/assets/images/person_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png" id="profile_view_pop_pic" height="250px" width="250px" alt="profile pic">
             <div class="supervisor_details">
                 <div class="details_wrapper">
@@ -63,8 +65,68 @@
                     <div>Stack: </div><span id="supervisor_stack">Software Engineering</span>
                 </div>
             </div>
-            <a href="#" id="edit_profile"><div>Edit</div></a>
+            <a href="/front-end/Supervisor/edit_profile.html" id="edit_profile"><div>Edit</div></a>
         </div>
+
+        <!-- Assigned Interns pop up-->
+         <div id="assigned_interns_pop">
+            <img src="/front-end/Supervisor/assets/images/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" id="assigned_interns_pop_close" class="pop_close" alt="close_pic" width="30px" alt="30px">
+            <div class="all_assigned_interns_wrapper">
+                <div class="intern_container">
+                    <img src="/front-end/Supervisor/assets/images/person_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png" alt="intern_image" width="70px" height="70px">
+                    <div class="intern_brief_details">
+                        <div>Name: <span>Clair</span></div>
+                        <div>Time-Left: <span>30 days 4 hours</span></div>
+                    </div>
+                </div>
+                <div class="intern_container">
+                    <img src="/front-end/Supervisor/assets/images/person_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png" alt="intern_image" width="70px" height="70px">
+                    <div class="intern_brief_details">
+                        <div>Name: <span>Elias</span></div>
+                        <div>Time-Left: <span>30 days 4 hours</span></div>
+                    </div>
+                </div>
+                <div class="intern_container">
+                    <img src="/front-end/Supervisor/assets/images/person_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png" alt="intern_image" width="70px" height="70px">
+                    <div class="intern_brief_details">
+                        <div>Name: <span>Yilda</span></div>
+                        <div>Time-Left: <span>30 days 4 hours</span></div>
+                    </div>
+                </div>
+            </div>
+         </div>
+
+         <!--announcements pop up-->
+         <div id="announcements_pop">
+            <img src="/front-end/Supervisor/assets/images/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" id="announcements_pop_close" class="pop_close" alt="close_pic" width="30px" alt="30px">
+            <a class="announcement_button" href="/front-end/Supervisor/make_announcement.html" id="make_announcement_button"><div>Make Announcement</div></a>
+            <div class="announcement_button" id="new_announcements_button">New Announcements</div>
+         </div>
+
+         <!--New announcements pop up-->
+         <div id="new_announcements_pop">
+            <img src="/front-end/Supervisor/assets/images/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" id="new_announcements_pop_close" class="pop_close" alt="close_pic" width="30px" alt="30px">
+            <div class="all_messages_wrapper">
+                <div class="message_wrapper">
+                    <div>Message Title</div>
+                    <div class="new_announcements_message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dignissimos ullam assumenda excepturi ipsam cumque. Quibusdam non placeat cumque maiores animi ab harum ipsum veritatis sunt odit accusamus sed, est voluptates minima laudantium incidunt vel perspiciatis obcaecati magni autem excepturi!</div>
+                    <div class="message_date_details">
+                        <div>Date: <span>...</span></div>
+                        <div>Time: <span>...</span></div>
+                    </div>
+                    <div class="message_author_wrapper">Author: <span>....</span></div>
+                </div>
+                <div class="message_wrapper">
+                    <div>Message Title</div>
+                    <div class="new_announcements_message">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, adipisci?</div>
+                    <div class="message_date_details">
+                        <div>Date: <span>...</span></div>
+                        <div>Time: <span>...</span></div>
+                    </div>
+                    <div class="message_author_wrapper">Author: <span>....</span></div> 
+                </div>
+            </div>
+         </div>
 
         <!--Side navigation bar-->
         <div id="side_nav">
@@ -99,15 +161,19 @@
                         <div class="container_picture"></div>
                         <div class="container_name">Create Task</div>
                     </div>
-                    <div class="container">
+                    <a href="/front-end/Supervisor/submitted_tasks.html" class="container">
                         <div class="container_picture"></div>
                         <div class="container_name">View Submitted Tasks</div>
-                    </div>
-                    <div class="container">
+                    </a>
+                    <a href="/front-end/Supervisor/evaluated_tasks.html" class="container">
                         <div class="container_picture"></div>
+                        <div class="container_name">Evaluated Tasks</div>
+                    </a>
+                    <div class="container">
+                        <div class="container_picture" id="assigned_interns_dash"></div>
                         <div class="container_name">Assigned Interns</div>
                     </div>
-                    <div class="container">
+                    <div class="container" id="announcements_dash">
                         <div class="container_picture"></div>
                         <div class="container_name">Announcements</div>
                     </div>
@@ -121,7 +187,46 @@
             <div id="nav_option_announcements_display">announcements display</div>
 
             <!-- settings display -->
-            <div id="nav_option_settings_display">Settings display</div>
+            <div id="nav_option_settings_display">
+                <div class="settings_section_wrapper">
+                    <div>Fonts:</div>
+                    <div class="setting_options_wrapper">
+                        <div class="setting_fonts">
+                            <div class="setting_select_button_font active_font"></div> Default
+                        </div>
+                        <div class="setting_fonts">
+                            <div class="setting_select_button_font"></div> Font 1
+                        </div>
+                        <div class="setting_fonts">
+                            <div class="setting_select_button_font"></div> Font 2
+                        </div>
+                        <div class="setting_fonts">
+                            <div class="setting_select_button_font"></div> Font 3
+                        </div>
+                        <div class="setting_fonts">
+                            <div class="setting_select_button_font"></div> Font 4
+                        </div>
+                    </div>
+                </div>
+                <div class="settings_section_wrapper">
+                    <div>Colours:</div>
+                    <div class="setting_options_wrapper">
+                        <div class="setting_colours">
+                            <div class="setting_select_button_color active_colour default_color"></div> Default
+                        </div>
+                        <div class="setting_colours">
+                            <div class="setting_select_button_color blue_color"></div> Blue
+                        </div>
+                        <div class="setting_colours">
+                            <div class="setting_select_button_color green_color"></div> Green
+                        </div>
+                        <div class="setting_colours">
+                            <div class="setting_select_button_color orange_color"></div> Orange
+                        </div>
+                    </div>
+                </div>
+
+            </div>
 
             <!-- personal summary display -->
             <div id="nav_option_personal_summary_display">Personal Summary display</div>

@@ -1,22 +1,44 @@
+/* fonts */
+/* @font-face {
+    font-family: ;
+    src: url();
+}
+@font-face {
+    font-family: ;
+    src: url();
+}
+@font-face {
+    font-family: ;
+    src: url();
+} */
+/* color variables declaration */
+
+:root{
+    --background_color: #721A14;
+    --body_background_color: #ffdddb;
+    --hover_color: #e1372b;
+    --content_modified_color: white;
+    /* font-family: ; */
+}
 body{
     height: fit-content;
     margin: 0;
-    background-color: #ffdddb;
+    background-color: var(--body_background_color);
 }
 #back_blur{
     display: none;
     position: fixed;
     height: 100%;
     width: 100%;
-    background-color: #3a0e0b;
+    background-color: #000000eb;
     opacity: 85%;
 }
 header{
     display: flex;
     padding: 2% 3%;
     border-radius: 0 0 25px 0;
-    background-color: #721A14;
-    color: white;
+    background-color: var(--background_color);
+    color: var(--content_modified_color);
     box-shadow: 5px 6px 10px rgb(109, 108, 108);
 }
 #logo{
@@ -80,8 +102,8 @@ main{
     position: absolute;
     z-index: 9999;
     margin-top: -3rem;
-    background-color: #721A14;
-    color: white;
+    background-color: var(--background_color);
+    color: var(--content_modified_color);
     padding: 2rem;
     border-radius: 1rem;
     display: none;
@@ -91,7 +113,7 @@ main{
     height: fit-content;
     min-width: 240px;
 }
-#create_task_pop_close{
+.pop_close{
     margin-left: auto;
     border-radius: 0.5rem;
     margin-top: -25px;
@@ -99,9 +121,16 @@ main{
     position: relative;
     left: 25px;
 }
-#create_task_pop_close:hover{
-    background-color: #e1372b;
+.pop_close:hover{
+    background-color: var(--hover_color);
     cursor: pointer;
+}
+.all_task_details_wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-height: 400px;
+    overflow-y: auto;
 }
 #task_title_wrapper{
     display: flex;
@@ -143,19 +172,18 @@ main{
     font-size: 1rem;
 }
 #task_resource_button_wrapper{
-    margin-left: auto;
     display: flex;
     align-items: flex-start;
 }
 #add_resource_button{
-    color: white;
-    background-color:#721A14;
+    color: var(--content_modified_color);
+    background-color:var(--background_color);
     border: 2px solid;
     padding: 0.5rem;
     border-radius: 0.5rem;
 }
 #add_resource_button:hover{
-    background-color: #e1372b;
+    background-color: var(--hover_color);
     scale: 1.1;
     cursor: pointer;
     transition: 0.3s;
@@ -164,15 +192,15 @@ main{
     text-align: center;
 }
 #create_task_button_wrapper button{
-    color: white;
-    background-color:#721A14;
+    color: var(--content_modified_color);
+    background-color:var(--background_color);
     border: 2px solid;
     padding: 0.8rem;
     border-radius: 0.5rem;
     font-size: 1rem;
 }
 #create_task_button_wrapper button:hover{
-    background-color: #e1372b;
+    background-color: var(--hover_color);
     scale: 1.1;
     cursor: pointer;
     transition: 0.3s;
@@ -184,8 +212,8 @@ main{
     position: absolute;
     z-index: 9999;
     margin-top: -3rem;
-    background-color: #721A14;
-    color: white;
+    background-color: var(--background_color);
+    color: var(--content_modified_color);
     padding: 2rem;
     border-radius: 1rem;
     display: none;
@@ -195,18 +223,6 @@ main{
     min-width: 240px;
     align-items: center;
     gap: 1rem;
-}
-#profile_view_pop_close{
-    margin-left: auto;
-    border-radius: 0.5rem;
-    margin-top: -25px;
-    padding: 0.5rem;
-    position: relative;
-    left: 25px;
-}
-#profile_view_pop_close:hover{
-    background-color: #e1372b;
-    cursor: pointer;
 }
 #profile_view_pop_pic{
     border: solid;
@@ -229,11 +245,124 @@ main{
     border-radius: 0.5rem;
 }
 #edit_profile:hover{
-    background-color: #e1372b;
+    background-color: var(--hover_color);
     transition: 0.3s;
     scale: 1.1;
 }
 
+/*assigned interns pop up */
+#assigned_interns_pop{
+    border: solid;
+    position: absolute;
+    z-index: 9999;
+    margin-top: -3rem;
+    background-color: var(--background_color);
+    color: var(--content_modified_color);
+    padding: 2rem;
+    border-radius: 1rem;
+    display: none;
+    width: 35vw;
+    height: fit-content;
+    min-width: 240px;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+.all_assigned_interns_wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-height: 400px;
+    overflow: auto;
+}
+.intern_container{
+    display: flex;
+    border: 1px solid;
+    border-radius: 0.5rem;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+.intern_brief_details{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* announcements pop up */
+#announcements_pop{
+    border: solid;
+    position: absolute;
+    z-index: 9999;
+    margin-top: 3rem;
+    background-color: var(--background_color);
+    color: var(--content_modified_color);
+    padding: 2rem;
+    border-radius: 1rem;
+    display: none;
+    width: 20vw;
+    height: fit-content;
+    min-width: 240px;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+.announcement_button{
+    border: solid;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+.announcement_button:hover{
+    background-color: var(--hover_color);
+    cursor: pointer;
+    scale: 1.1;
+    transition: 0.3s;
+}
+
+/* new_announcements_pop */
+#new_announcements_pop{
+    border: solid;
+    position: absolute;
+    z-index: 9999;
+    margin-top: 0rem;
+    background-color: var(--background_color);
+    color: var(--content_modified_color);
+    padding: 2rem;
+    border-radius: 1rem;
+    display: none;
+    width: 40vw;
+    height: fit-content;
+    min-width: 240px;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+.all_messages_wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-height: 300px;
+    overflow: auto;
+}
+.message_wrapper{
+    border: 1px solid;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+.new_announcements_message{
+    text-align: justify;
+    line-height: 1.5rem;
+}
+.message_date_details{
+    display: flex;
+    gap: 2rem;
+}
+.message_author_wrapper{
+    align-self: flex-end;
+}
 /* continuation*/
 #side_nav{
     height: 100%;
@@ -242,8 +371,8 @@ main{
     width: 15rem;
     min-width: 170px;
     gap: 2px;
-    background-color: #721A14;
-    color: white;
+    background-color: var(--background_color);
+    color: var(--content_modified_color);
     box-shadow: 5px 6px 10px rgb(109, 108, 108);
 }
 .nav_options{
@@ -251,19 +380,19 @@ main{
 }
 a{
     text-decoration: none;
-    color: white;
+    color: var(--content_modified_color);
 }
 .nav_options:hover{
     cursor: pointer;
-    background-color: #e1372b;
+    background-color: var(--hover_color);
 }
 #responsive_nav{
     display: none;
     flex-direction: column;
     padding: 1rem;
     gap: 2px;
-    background-color: #721A14;
-    color: white;
+    background-color: var(--background_color);
+    color: var(--content_modified_color);
     box-shadow: 5px 6px 10px rgb(109, 108, 108);
     position: relative;
     left: 0;
@@ -275,6 +404,8 @@ a{
 #info_per_nav_item{
   width: 100%;  
 }
+
+/* dashbooard display/window */
 #nav_option_dashboard_display{
     display: flex;
     justify-content: center;
@@ -297,6 +428,7 @@ a{
     gap: 1rem;
     border-radius: 1rem;
     padding: 1rem;
+    color: black;
 }
 .container:hover{
     scale: 1.1;
@@ -317,9 +449,52 @@ a{
 #nav_option_announcements_display{
     display: none;
 }
+
+/* settings display/window */
 #nav_option_settings_display{
     display: none;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
 }
+.settings_section_wrapper{
+    border: solid var(--background_color);
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: fit-content;
+    margin-top: 3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.setting_options_wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+.setting_fonts, .setting_colours{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.setting_select_button_font, .setting_select_button_color{
+    border: solid var(--background_color);
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.setting_select_button_color:hover, .setting_select_button_font:hover{
+    cursor: pointer;
+}
+.active_colour, .active_font{
+    border: solid var(--content_modified_color);
+    background-color: var(--background_color);
+}
+
+
 #nav_option_personal_summary_display{
     display: none;
 }
@@ -335,8 +510,15 @@ footer{
         display: flex;
     }
     #create_task_pop{
-        width: 70vw;
-        margin-top: -6rem;
+        width: 60vw;
+    }
+    #new_announcements_pop{
+        width: 55vw;
+        padding: 1.5rem;
+    }
+    .message_date_details{
+        flex-direction: column;
+        gap: 1rem;
     }
     #task_title_wrapper, #task_description_wrapper{
         flex-direction: column;
@@ -356,6 +538,11 @@ footer{
 }
 @media screen and (max-width: 646px) {
     #dashboard_display_wrapper{
+        overflow: scroll;
+    }
+}
+@media screen and (max-width: 550px) {
+    #nav_option_settings_display{
         overflow: scroll;
     }
 }

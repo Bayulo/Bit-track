@@ -56,20 +56,20 @@ settings_button.forEach(item => {
         dashboard_display.style.display = "none"
         intern_details_display.style.display = "none"
         announcements_display.style.display = "none"
-        settings_display.style.display = "block"
+        settings_display.style.display = "flex"
         personal_summary_display.style.display = "none"
     }
 });
 
 //responsive nav bar behaviour
-let global_toggle = 0;
+let global_menu_toggle = 0;
 const responsive_nav_button = document.getElementById("menu_button");
 const hidden_icons = document.querySelectorAll(".show_on_mobile");
 const responsive_nav_bar = document.getElementById("responsive_nav");
 const menu_icon = document.getElementById("icon");
 
 function show_menu(){
-    global_toggle = 1;
+    global_menu_toggle = 1;
     menu_icon.setAttribute("src", "/front-end/Supervisor/assets/images/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png");
     responsive_nav_button.style.marginLeft = "1.5rem";
     hidden_icons.forEach(item => {
@@ -99,11 +99,11 @@ function hide_menu(){
     responsive_nav_bar.style.position = "static";
     responsive_nav_bar.style.height = "auto";
     hide_back_blur();
-    global_toggle = 0;
+    global_menu_toggle = 0;
 }
 
 responsive_nav_button.onclick = function(){
-    if(global_toggle == 0){
+    if(global_menu_toggle == 0){
         show_menu();
     }
     else{
@@ -125,6 +125,9 @@ back_blur.onclick = function(){
     hide_menu();
     hide_create_task_pop();
     hide_profile_pop();
+    hide_assigned_interns_pop();
+    hide_announcements_pop();
+    hide_new_announcements_pop();
 }
 
 //create task pop up button functions 
@@ -145,9 +148,6 @@ add_resource_button.onclick = function(){
     if(count < 6){ //ensure max resources == 5
         let resources_holder = document.getElementById("task_resource_sub_wrapper");
         resources_holder.innerHTML+= `<input type="text" id="task_resource">`;
-        if(count > 2){
-            create_task_pop.style.marginTop = "-8rem";
-        }
     }
 }
 //close
@@ -178,3 +178,133 @@ profile_view_pop_close.onclick = function(){
 function hide_profile_pop(){
     profile_view_pop.style.display = "none";
 }
+
+//assigned interns pop up functions
+const assigned_interns_pop = document.getElementById("assigned_interns_pop");
+const assigned_interns_dash = document.getElementById("assigned_interns_dash");
+const assigned_interns_pop_close = document.getElementById("assigned_interns_pop_close");
+assigned_interns_dash.onclick = function(){
+    assigned_interns_pop.style.display = "flex";
+    show_back_blur();
+}
+assigned_interns_pop_close.onclick = function(){
+    hide_assigned_interns_pop();
+    hide_back_blur();
+}
+function hide_assigned_interns_pop(){
+    assigned_interns_pop.style.display = "none";
+}
+
+//announcements_pop functions
+const announcements_pop = document.getElementById("announcements_pop");
+const announcements_dash = document.getElementById("announcements_dash");
+const announcements_pop_close = document.getElementById("announcements_pop_close");
+announcements_dash.onclick = function(){
+    announcements_pop.style.display = "flex";
+    show_back_blur();
+}
+announcements_pop_close.onclick = function(){
+    hide_announcements_pop();
+}
+function hide_announcements_pop(){
+    announcements_pop.style.display = "none";
+    hide_back_blur();
+}
+
+
+//new announcements pop
+const new_announcements_pop_close = document.getElementById("new_announcements_pop_close");
+const new_announcements_button = document.getElementById("new_announcements_button");
+const new_announcements_pop = document.getElementById("new_announcements_pop");
+
+new_announcements_button.onclick = function(){
+    new_announcements_pop.style.display = "flex";
+    show_back_blur();
+}
+new_announcements_pop_close.onclick = function(){
+    hide_new_announcements_pop();
+    hide_announcements_pop();
+}
+function hide_new_announcements_pop(){
+    new_announcements_pop.style.display = "none";
+}
+//settings functions
+
+//font toggle function
+//onclick of any of the font buttons, walk through the button list and deactivate any previously activated font
+//then activated the clicked button
+const all_font_buttons = document.querySelectorAll(".setting_select_button_font");
+all_font_buttons.forEach(item =>{
+    item.onclick = function(){
+        //ui toggle logic
+        all_font_buttons.forEach(font_button => {
+            if(font_button.classList.contains("active_font")){
+            font_button.classList.remove("active_font");
+        }
+        });
+        item.classList.add("active_font");
+
+        //actual font changing logic
+        if(item.classList.contains("")){
+            const root = document.documentElement;
+            root.style.setProperty("font-family","")
+        }
+        if(item.classList.contains("")){
+            const root = document.documentElement;
+            root.style.setProperty("font-family","")
+        }
+        if(item.classList.contains("")){
+            const root = document.documentElement;
+            root.style.setProperty("font-family","")
+        }
+        if(item.classList.contains("")){
+            const root = document.documentElement;
+            root.style.setProperty("font-family","")
+        }
+        if(item.classList.contains("")){
+            const root = document.documentElement;
+            root.style.setProperty("font-family","")
+        }
+    }
+})
+
+//colour toggle function;same logic as above
+const all_colour_buttons = document.querySelectorAll(".setting_select_button_color");
+all_colour_buttons.forEach(item =>{
+    item.onclick = function(){
+        //ui toggle logic
+        all_colour_buttons.forEach(colour_button => {
+            if(colour_button.classList.contains("active_colour")){
+            colour_button.classList.remove("active_colour");
+        }
+        });
+        item.classList.add("active_colour");
+
+        //actual color changing logic
+        const root = document.documentElement;
+        if(item.classList.contains("default_color")){
+            root.style.setProperty("--background_color", "#721A14");
+            root.style.setProperty("--body_background_color", "#ffdddb");
+            root.style.setProperty("--hover_color", "#e1372b");
+            root.style.setProperty("--content_modified_color", "white");
+        }
+        if(item.classList.contains("blue_color")){
+            root.style.setProperty("--background_color", "black");
+            root.style.setProperty("--body_background_color", "white");
+            root.style.setProperty("--hover_color", "white");
+            root.style.setProperty("--content_modified_color", "blue");
+        }
+        if(item.classList.contains("green_color")){
+            root.style.setProperty("--background_color", "");
+            root.style.setProperty("--body_background_color", "");
+            root.style.setProperty("--hover_color", "");
+            root.style.setProperty("--content_modified_color", "");
+        }
+        if(item.classList.contains("orange_color")){
+            root.style.setProperty("--background_color", "");
+            root.style.setProperty("--body_background_color", "");
+            root.style.setProperty("--hover_color", "");
+            root.style.setProperty("--content_modified_color", "");
+        }
+    }
+})

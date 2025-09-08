@@ -1,0 +1,104 @@
+:root{
+    --background_color: #721A14;
+    --body_background_color: #ffdddb;
+    --hover_color: #e1372b;
+    --content_modified_color: white;
+    /* font-family: ; */
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--body_background_color);
+}
+#make_announcement_card{
+    background-color: var(--background_color);
+    color: var(--content_modified_color);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    display: flex;
+    width: 40vw;
+    height: fit-content;
+    min-width: 240px;
+    flex-direction: column;
+    gap: 2rem;
+    box-shadow: 0px 5px 15px 0px black;
+}
+.make_announcement_title_wrapper{
+    display: flex;
+    gap: 3.3rem;
+}
+#make_announcement_title{
+    width: 100%;
+    height: 2rem;
+    font-size: large;
+    border-radius: 0.5rem;
+}
+.make_announcement_message_wrapper{
+    display: flex;
+    gap: 1rem;
+    height: 12rem;
+}
+#make_announcement_message{
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 8rem;
+    padding: 0.5rem;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    max-height: inherit;
+}
+.make_announcement_details{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+#make_announcement_date_wrapper{
+    display: flex;
+    gap: 2rem;
+}
+#make_announcement_author_wrapper{
+    text-align: end;
+}
+#send_announcement_button{
+    background-color: var(--background_color);
+    border-radius: 0.5rem;
+    width: fit-content;
+    padding: 0.5rem 2rem;
+    border: solid var(--content_modified_color);
+    color: var(--content_modified_color);
+}
+#send_announcement_button:hover{
+    scale: 1.1;
+    transition: 0.3s;
+    background-color: var(--hover_color);
+    cursor: pointer;
+}
+#send_announcement_button_wrapper{
+    text-align: center;
+}
+@media screen and (max-width: 1250px) {
+    .make_announcement_title_wrapper{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .make_announcement_message_wrapper{
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+}
+@media screen and (max-width: 1000px) {
+    #make_announcement_date_wrapper{
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+@media screen and (max-width: 425px) {
+    #make_announcement_card{
+        padding: 2rem;
+    }
+}
