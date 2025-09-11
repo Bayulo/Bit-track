@@ -1,0 +1,75 @@
+:root{
+    --background_color: #721A14;
+    --body_background_color: #ffdddb;
+    --hover_color: #e1372b;
+    --content_modified_color: white;
+    /* font-family: ; */
+}
+body{
+    height: 100vh;
+    border: solid;
+    margin: 0;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--body_background_color);
+}
+.search_wrapper{
+    padding: 0.5rem;
+    display: flex;
+    gap: 1rem;
+}
+.search{
+    height: 2rem;
+    border-radius: 1rem;
+    padding: 0.2rem;
+    font-size: large;
+}
+#search_button{
+    background-color: var(--background_color);
+    color: var(--content_modified_color);
+    border-radius: 1rem;
+    padding: 0 1rem;
+}
+.all_tasks_holder{
+    border: 1.6px dotted var(--background_color);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+.task_holder{
+    border: solid var(--background_color);
+    padding: 1rem;
+    background-color: var(--content_modified_color);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+.serial_number{
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--background_color);
+    color: var(--content_modified_color);
+    flex-shrink: 0;
+}
+.evaluated_interns{
+    transform: translateY(0%);
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.5s;
+    border: solid;
+    display: none;
+}
+.drop_down_button:hover .evaluated_interns{
+    display: block;
+    height: 50px;
+}

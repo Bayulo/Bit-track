@@ -7,24 +7,47 @@
     <link rel="stylesheet" href="/front-end/Supervisor/assets/styles/submitted_tasks.css">
 </head>
 <body>
+    <div id="back_blur"></div>
+    <!-- pop up -->
+    <div class="evaluate_pop">
+        <img src="/front-end/Supervisor/assets/images/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" id="evaluate_pop_close" class="pop_close" alt="close button" width="35px" height="36px">
+        <div class="evaluate_message">
+            <span>Task Name</span><br>
+            Evaluating: <span>Student Name</span></div>
+        <div class="mark_and_grade">
+            <div>
+                <label for="this_mark">Mark: </label><input type="number" id="this_mark" class="mark" required> / 100
+            </div>
+            <div>Grade: <span id="grade"></span></div>
+        </div>
+        <div class="errors"></div>
+        <div class="button_wrapper">
+            <button id="record_button">Record</button>
+        </div>
+    </div>
+    <div class="search_wrapper">
+        <input type="text" placeholder="Task title" class="search">
+        <button id="search_button">Search</button>
+    </div>
+    <!-- first task -->
     <div class="task_wrapper">
-        <div>Task name sample</div>
+        <div theme = "text">Task name sample 1</div>
+        <div>Assigned date: <span>.....</span></div>
         <div class="intern_wrapper">
             <div class="serial_number">1</div>
             <div class="intern_and_task_details">
-                <div>
-                    <div class="intern_details">
-                        <img src="/front-end/Supervisor/assets/images/person_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png" alt="intern image" height="50px" width="50px">
-                        <div>
-                            <div>Intern name: <spna>.....</spna></div>
-                            <div>Internship Elapsed time: <span>.....</span></div>       
-                        </div>
+                <div class="intern_details_wrapper">
+                    <img src="/front-end/Supervisor/assets/images/person_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png" alt="intern image" class="intern_details_image" height="50px" width="50px">
+                    <div class="intern_details_text">
+                        <div>Intern name: Lorem ipsum dolor sit amet.<spna>.....</spna></div>
+                        <div>Internship Elapsed time: 30 days 23 hours<span>.....</span></div>       
                     </div>
-                    <div>
-                        <div>Task submission link: <span>.....</span></div>
-                        <div class="grade_button_wrapper">
-                            <button class="evaluate_button">Evaluate</button>
-                        </div>
+                </div>
+                <div class="task_details_wrapper">
+                    <div>Submitted date: <span>.....</span></div>
+                    <div>Submission link: <span>.....</span></div>
+                    <div class="grade_button_wrapper">
+                        <button class="evaluate_button">Evaluate</button>
                     </div>
                 </div>
             </div>
@@ -32,19 +55,18 @@
         <div class="intern_wrapper">
             <div class="serial_number">2</div>
             <div class="intern_and_task_details">
-                <div>
-                    <div class="intern_details">
-                        <img src="/front-end/Supervisor/assets/images/person_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png" alt="intern image" height="50px" width="50px">
-                        <div>
-                            <div>Intern name: <spna>.....</spna></div>
-                            <div>Internship Elapsed time: <span>.....</span></div>       
-                        </div>
+                <div class="intern_details_wrapper">
+                    <img src="/front-end/Supervisor/assets/images/person_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png" alt="intern image" class="intern_details_image" height="50px" width="50px">
+                    <div class="intern_details_text">
+                        <div>Intern name: <spna>.....</spna></div>
+                        <div>Internship Elapsed time: <span>.....</span></div>       
                     </div>
-                    <div>
-                        <div>Task submission link: <span>.....</span></div>
-                        <div class="grade_button_wrapper">
-                            <button class="evaluate_button">Evaluate</button>
-                        </div>
+                </div>
+                <div class="task_details_wrapper">
+                    <div>Submitted date: <span>.....</span></div>
+                    <div>Submission link: <span>.....</span></div>
+                    <div class="grade_button_wrapper">
+                        <button class="evaluate_button">Evaluate</button>
                     </div>
                 </div>
             </div>
@@ -52,24 +74,86 @@
         <div class="intern_wrapper">
             <div class="serial_number">3</div>
             <div class="intern_and_task_details">
-                <div>
-                    <div class="intern_details">
-                        <img src="/front-end/Supervisor/assets/images/person_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png" alt="intern image" height="50px" width="50px">
-                        <div>
-                            <div>Intern name: <spna>.....</spna></div>
-                            <div>Internship Elapsed time: <span>.....</span></div>       
-                        </div>
+                <div class="intern_details_wrapper">
+                    <img src="/front-end/Supervisor/assets/images/person_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png" alt="intern image" class="intern_details_image" height="50px" width="50px">
+                    <div class="intern_details_text">
+                        <div>Intern name: <spna>.....</spna></div>
+                        <div>Internship Elapsed time: <span>.....</span></div>       
                     </div>
-                    <div>
-                        <div>Task submission link: <span>.....</span></div>
-                        <div class="grade_button_wrapper">
-                            <button class="evaluate_button">Evaluate</button>
-                        </div>
+                </div>
+                <div class="task_details_wrapper">
+                    <div>Submitted date: <span>.....</span></div>
+                    <div>Submission link: <span>.....</span></div>
+                    <div class="grade_button_wrapper">
+                        <button class="evaluate_button">Evaluate</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src=""></script>
+
+<!-- second task -->
+    <div class="task_wrapper">
+        <div>Task name sample 2</div>
+        <div>Assigned date: <span>.....</span></div>
+        <div class="intern_wrapper">
+            <div class="serial_number">1</div>
+            <div class="intern_and_task_details">
+                <div class="intern_details_wrapper">
+                    <img src="/front-end/Supervisor/assets/images/person_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png" alt="intern image" class="intern_details_image" height="50px" width="50px">
+                    <div class="intern_details_text">
+                        <div>Intern name: <spna>.....</spna></div>
+                        <div>Internship Elapsed time: <span>.....</span></div>       
+                    </div>
+                </div>
+                <div class="task_details_wrapper">
+                    <div>Submitted date: <span>.....</span></div>
+                    <div>Submission link: <span>.....</span></div>
+                    <div class="grade_button_wrapper">
+                        <button class="evaluate_button">Evaluate</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="intern_wrapper">
+            <div class="serial_number">2</div>
+            <div class="intern_and_task_details">
+                <div class="intern_details_wrapper">
+                    <img src="/front-end/Supervisor/assets/images/person_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png" alt="intern image" class="intern_details_image" height="50px" width="50px">
+                    <div class="intern_details_text">
+                        <div>Intern name: <spna>.....</spna></div>
+                        <div>Internship Elapsed time: <span>.....</span></div>       
+                    </div>
+                </div>
+                <div class="task_details_wrapper">
+                    <div>Submitted date: <span>.....</span></div>
+                    <div>Submission link: <span>.....</span></div>
+                    <div class="grade_button_wrapper">
+                        <button class="evaluate_button">Evaluate</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="intern_wrapper">
+            <div class="serial_number">3</div>
+            <div class="intern_and_task_details">
+                <div class="intern_details_wrapper">
+                    <img src="/front-end/Supervisor/assets/images/person_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png" alt="intern image" class="intern_details_image" height="50px" width="50px">
+                    <div class="intern_details_text">
+                        <div>Intern name: <spna>.....</spna></div>
+                        <div>Internship Elapsed time: <span>.....</span></div>       
+                    </div>
+                </div>
+                <div class="task_details_wrapper">
+                    <div>Submitted date: <span>.....</span></div>
+                    <div>Submission link: <span>.....</span></div>
+                    <div class="grade_button_wrapper">
+                        <button class="evaluate_button">Evaluate</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/front-end/Supervisor/assets/submitted_taks.js"></script>
 </body>
 </html>

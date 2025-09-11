@@ -20,6 +20,12 @@
     --content_modified_color: white;
     /* font-family: ; */
 }
+/* :root[theme="dark"]{
+    --background_color: black;
+    --body_background_color: white;
+    --hover_color: white;
+    --content_modified_color: blue;
+} */
 body{
     height: fit-content;
     margin: 0;

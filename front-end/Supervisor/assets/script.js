@@ -21,6 +21,7 @@ dashboard_button.forEach(item => {
         announcements_display.style.display = "none"
         settings_display.style.display = "none"
         personal_summary_display.style.display = "none"
+        hide_menu();
     }
 });
 intern_details_button.forEach(item => {
@@ -40,6 +41,7 @@ announcements_button.forEach(item => {
         announcements_display.style.display = "block"
         settings_display.style.display = "none"
         personal_summary_display.style.display = "none"
+        hide_menu();
     }
 });
 personal_summary_button.forEach(item => {
@@ -49,6 +51,7 @@ personal_summary_button.forEach(item => {
         announcements_display.style.display = "none"
         settings_display.style.display = "none"
         personal_summary_display.style.display = "block"
+        hide_menu();
     }
 });
 settings_button.forEach(item => {
@@ -58,6 +61,7 @@ settings_button.forEach(item => {
         announcements_display.style.display = "none"
         settings_display.style.display = "flex"
         personal_summary_display.style.display = "none"
+        hide_menu();
     }
 });
 
@@ -293,6 +297,7 @@ all_colour_buttons.forEach(item =>{
             root.style.setProperty("--body_background_color", "white");
             root.style.setProperty("--hover_color", "white");
             root.style.setProperty("--content_modified_color", "blue");
+            // root.setAttribute("theme", "dark");
         }
         if(item.classList.contains("green_color")){
             root.style.setProperty("--background_color", "");
