@@ -37,7 +37,7 @@ body{
     height: 100%;
     width: 100%;
     background-color: #000000eb;
-    opacity: 85%;
+    opacity: 0.85;
 }
 header{
     display: flex;
@@ -84,13 +84,13 @@ header{
     display: none;
 }
 #profile:hover{
-    scale: 1.15;
+    transform: scale(1.15);
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s ease-in-out;
 }
 #profile:hover #edit_pencil{
     display: block;
-    transition: 0.3s;
+    transition: all 0.3s ease-in-out;
 }
 
 /* main page */
@@ -190,9 +190,9 @@ main{
 }
 #add_resource_button:hover{
     background-color: var(--hover_color);
-    scale: 1.1;
+    transform: scale(1.15);
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s ease-in-out;
 }
 #create_task_button_wrapper{
     text-align: center;
@@ -207,9 +207,9 @@ main{
 }
 #create_task_button_wrapper button:hover{
     background-color: var(--hover_color);
-    scale: 1.1;
+    transform: scale(1.15);
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s ease-in-out;
 }
 
 /* profile view pop */
@@ -252,8 +252,8 @@ main{
 }
 #edit_profile:hover{
     background-color: var(--hover_color);
-    transition: 0.3s;
-    scale: 1.1;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.15);
 }
 
 /*assigned interns pop up */
@@ -321,8 +321,8 @@ main{
 .announcement_button:hover{
     background-color: var(--hover_color);
     cursor: pointer;
-    scale: 1.1;
-    transition: 0.3s;
+    transform: scale(1.15);
+    transition: all 0.3s ease-in-out;
 }
 
 /* new_announcements_pop */
@@ -437,8 +437,8 @@ a{
     color: black;
 }
 .container:hover{
-    scale: 1.1;
-    transition: 0.3s;
+    transform: scale(1.15);
+    transition: all 0.3s ease-in-out;
     box-shadow: 0px 5px 10px 0px;
     cursor: pointer;
 }
