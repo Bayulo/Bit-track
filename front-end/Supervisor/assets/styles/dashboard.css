@@ -68,7 +68,7 @@ header{
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
-    background: url(/front-end/Supervisor/assets/images/person_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png);
+    background: url(../images/person_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -77,7 +77,7 @@ header{
     width: 40%;
     height: 40%;
     border-radius: 50%;
-    background: url(/front-end/Supervisor/assets/images/edit_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png);
+    background: url(../images/edit_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-color: slategray;
